@@ -1,6 +1,7 @@
 ### v0.2.0
 
 -   Feature: Add about section.
+-   Feature: Add back to top arrow on About section.
 
 ### v0.1.0
 

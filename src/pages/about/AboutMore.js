@@ -1,5 +1,7 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
 
+import arrowIcon from 'assets/images/arrow.png';
 import blobIcon from 'assets/images/blob.png';
 import clayWorkIcon from 'assets/images/clay-work.png';
 import handIcon from 'assets/images/hand.png';
@@ -91,6 +93,9 @@ const AboutMore = () => {
                         <img src={blobIcon} alt="" />
                     </div>
                 </div>
+                <HashLink to="#top" className="absolute z-20 bottom-16 right-32 cursor-pointer rotate-180">
+                    <img src={arrowIcon} alt="" />
+                </HashLink>
             </div>
         </>
     );

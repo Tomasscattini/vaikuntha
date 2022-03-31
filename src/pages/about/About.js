@@ -31,7 +31,7 @@ const About = () => {
         <div
             className={`${isAnimationRunning && 'h-screen overflow-hidden'} relative w-screen min-h-screen pt-28
                         after:content-[''] after:fixed after:top-0 after:left-0 
-                        after:w-full after:h-full after:bg-[url('assets/images/about-initial-bg.jpg')]
+                        after:w-full after:h-full after:bg-[url('assets/images/about-bg.jpg')]
                         after:bg-center after:bg-cover after:bg-no-repeat after:animate-fade-linear 
                         after:z-10`}
         >

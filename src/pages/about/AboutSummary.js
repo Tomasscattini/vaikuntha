@@ -1,7 +1,8 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
+
 import arrowIcon from 'assets/images/arrow.png';
 import moonIcon from 'assets/images/moon.png';
-import { HashLink } from 'react-router-hash-link';
 
 const AboutSummary = () => {
     return (
