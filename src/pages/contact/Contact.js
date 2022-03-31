@@ -1,12 +1,17 @@
-import React, { forwardRef } from 'react';
+import React, { useLayoutEffect } from 'react';
+import { useContextInfo } from 'hooks/ContextProvider';
 
-const Footer = forwardRef((props, ref) => {
+const Contact = (props) => {
+    const { setColorScheme, setIsAppNameVisible } = useContextInfo();
+
+    useLayoutEffect(() => {
+        setColorScheme('green');
+        setIsAppNameVisible(true);
+        // eslint-disable-next-line
+    }, []);
+
     return (
-        <div
-            ref={ref}
-            {...props}
-            className="h-screen w-5/6 sm:w-3/4 mx-auto grid grid-cols-1 grid-rows-5 gap-2 text-green"
-        >
+        <div {...props} className="h-screen w-5/6 sm:w-3/4 mx-auto grid grid-cols-1 grid-rows-5 gap-2 text-green">
             <div className="w-full row-start-3">
                 <p className="sm:text-[3vw] lowercase">Estemos en contacto</p>
                 <p className="text-[10vw] leading-[10vw] lowercase font-bold">Seamos redes</p>
@@ -45,6 +50,6 @@ const Footer = forwardRef((props, ref) => {
             </div>
         </div>
     );
-});
+};
 
-export default Footer;
+export default Contact;

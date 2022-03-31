@@ -1,27 +1,32 @@
 import React from 'react';
+import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 import { useContextInfo } from 'hooks/ContextProvider';
 
-import { Menu } from 'components';
-import { HashLink } from 'react-router-hash-link';
+import { Logo, Menu } from 'components';
 
 const Navbar = () => {
-    const { section, sectionOptions } = useContextInfo();
+    const { colorScheme, isAppNameVisible } = useContextInfo();
+
+    const colors = {
+        beige: 'text-beige',
+        green: 'text-green',
+        yellow: 'text-yellow',
+        default: 'text-green'
+    };
+    const text = colors[colorScheme] || colors.default;
 
     return (
-        <div className="fixed w-screen h-16 top-0 left-0 z-10 flex justify-between items-center px-8">
-            {section === sectionOptions.header ? (
-                <div className="text-beige">logo_beige</div>
-            ) : (
-                <div className="text-darkGreen">logo_green</div>
-            )}
-            {section !== sectionOptions.header && (
+        <div className="absolute w-screen top-0 left-0 z-40 flex justify-between items-center px-8">
+            <Logo className="w-16 h-16 mt-8" color={colorScheme} />
+            {isAppNameVisible && (
                 <div>
-                    <h1 className="text-[3rem]">
-                        <HashLink to="/#top">Vaikuntha</HashLink>
+                    <h1 className={clsx(text, 'text-[3rem] transition-all duration-500')}>
+                        <Link to="/">Vaikuntha</Link>
                     </h1>
                 </div>
             )}
-            <Menu color={section === sectionOptions.header ? 'white' : 'green'} />
+            <Menu color={colorScheme} />
         </div>
     );
 };

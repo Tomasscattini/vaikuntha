@@ -1,3 +1,7 @@
+### v0.2.0
+
+-   Feature: Add about section.
+
 ### v0.1.0
 
 -   Feature: Basic project structure.
