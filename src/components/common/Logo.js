@@ -6,6 +6,7 @@ const Logo = ({ className, color, ...props }) => {
         beige: 'text-beige',
         green: 'text-green',
         yellow: 'text-yellow',
+        orange: 'text-orange',
         default: 'text-green'
     };
     const text = colors[color] || colors.default;

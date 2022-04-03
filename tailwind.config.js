@@ -7,7 +7,8 @@ module.exports = {
             darkGreen: '#232616',
             green: '#3E5041',
             terra: '#591310',
-            yellow: '#C19A5B'
+            yellow: '#C19A5B',
+            orange: '#BA6543'
         },
         fontFamily: {
             primary: 'Poppins',
@@ -56,6 +57,6 @@ module.exports = {
             'translate-word-2': 'translate-word-2 2s linear forwards'
         }
     },
-    plugins: [],
+    plugins: [require('@tailwindcss/line-clamp')],
     purge: ['./src/**/*.{js, jsx, ts, tsx}', './public/index.html']
 };

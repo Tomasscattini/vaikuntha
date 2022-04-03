@@ -11,6 +11,7 @@ const Button = ({ color, ...props }) => {
         beige: 'bg-beige',
         green: 'bg-green',
         yellow: 'bg-yellow',
+        orange: 'bg-orange',
         default: 'bg-green'
     };
     const bg = colors[color] || colors.default;

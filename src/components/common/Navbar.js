@@ -12,6 +12,7 @@ const Navbar = () => {
         beige: 'text-beige',
         green: 'text-green',
         yellow: 'text-yellow',
+        orange: 'text-orange',
         default: 'text-green'
     };
     const text = colors[colorScheme] || colors.default;

@@ -1,3 +1,7 @@
+### v0.3.0
+
+-   Feature: Add relatos visuales page and details page.
+
 ### v0.2.0
 
 -   Feature: Add about section.
