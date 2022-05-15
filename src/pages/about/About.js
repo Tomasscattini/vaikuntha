@@ -6,11 +6,12 @@ import AboutSummary from './AboutSummary';
 import AboutMore from './AboutMore';
 
 const About = () => {
-    const { setColorScheme, setIsAppNameVisible } = useContextInfo();
+    const { setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } = useContextInfo();
     const [isAnimationRunning, setIsAnimationRunning] = useState(true);
 
     useLayoutEffect(() => {
         setColorScheme('yellow');
+        setIsAppLogoVisible(true);
         setIsAppNameVisible(true);
         const timer = setTimeout(() => {
             setColorScheme('green');
@@ -29,11 +30,10 @@ const About = () => {
 
     return (
         <div
-            className={`${isAnimationRunning && 'h-screen overflow-hidden'} relative w-screen min-h-screen pt-28
-                        after:content-[''] after:fixed after:top-0 after:left-0 
-                        after:w-full after:h-full after:bg-[url('assets/images/about-bg.jpg')]
-                        after:bg-center after:bg-cover after:bg-no-repeat after:animate-fade-linear 
-                        after:z-10`}
+            className={`${
+                isAnimationRunning &&
+                "h-screen overflow-hidden after:content-[''] after:fixed after:top-0 after:left-0 after:w-full after:h-full after:bg-[url('assets/images/about-bg.jpg')] after:bg-center after:bg-cover after:bg-no-repeat after:animate-fade-linear after:z-10"
+            } relative w-screen min-h-screen snap-y`}
         >
             <AboutHeader />
 

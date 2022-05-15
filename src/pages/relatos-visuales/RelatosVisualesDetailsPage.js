@@ -36,13 +36,14 @@ const RICHTEXT_OPTIONS = {
 const RelatosVisualesDetailsPage = () => {
     const { id } = useParams();
 
-    const { setColorScheme, setIsAppNameVisible } = useContextInfo();
+    const { setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } = useContextInfo();
 
     const [loading, setLoading] = useState(true);
     const [post, setPost] = useState(null);
 
     useLayoutEffect(() => {
         setColorScheme('orange');
+        setIsAppLogoVisible(true);
         setIsAppNameVisible(true);
         // eslint-disable-next-line
     }, []);
@@ -63,17 +64,17 @@ const RelatosVisualesDetailsPage = () => {
         <div>
             <div className="relative w-full h-96 overflow-hidden">
                 <img
-                    className="object-cover"
+                    className="object-cover w-screen"
                     src={post?.headerBg?.fields?.file?.url}
                     alt={post?.headerBg?.fields?.title}
                 />
                 <div className="absolute bottom-0 left-0 w-screen">
-                    <h1 className="text-5xl font-primary text-orange lowercase mb-20 w-5/6 lg:w-4/6 mx-auto z-20">
+                    <h1 className="text-5xl font-primary text-orange lowercase mb-20 w-5/6 xl:w-4/6 mx-auto z-20">
                         {post?.title}
                     </h1>
                 </div>
             </div>
-            <div className="w-5/6 lg:w-4/6 mx-auto my-24 text-green text-lg">
+            <div className="w-5/6 xl:w-4/6 mx-auto my-24 text-green text-lg">
                 <div>{documentToReactComponents(post?.content, RICHTEXT_OPTIONS)}</div>
             </div>
         </div>

@@ -45,7 +45,7 @@ module.exports = {
             },
             'translate-word-2': {
                 '99%': { 'font-family': 'Poppins', 'font-size': '3.5rem' },
-                '100%': { top: '2rem', right: '-28rem', 'font-family': 'SUNN-Line-Regular', 'font-size': '10rem' }
+                '100%': { top: '1.2rem', right: '-28rem', 'font-family': 'SUNN-Line-Regular', 'font-size': '10rem' }
             }
         },
         animation: {

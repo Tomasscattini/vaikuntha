@@ -4,23 +4,27 @@ import { Routes, Route } from 'react-router-dom';
 import {
     AboutPage,
     ContactPage,
-    GalleryPage,
+    EntreMujeresPage,
     LandingPage,
     ProjectsPage,
     RelatosVisualesPage,
-    RelatosVisualesDetailsPage
+    RelatosVisualesDetailsPage,
+    RelatosVisualesListPage,
+    TallerAdentroPage
 } from 'pages';
 
 const App = () => {
     return (
         <Routes>
             <Route path="/" exact element={<LandingPage />} />
-            <Route path="/about" exact element={<AboutPage />} />
-            <Route path="/contact" exact element={<ContactPage />} />
-            <Route path="/gallery" exact element={<GalleryPage />} />
-            <Route path="/projects" exact element={<ProjectsPage />} />
-            <Route path="/relatos-visuales" exact element={<RelatosVisualesPage />} />
-            <Route path="/relatos-visuales/:id" element={<RelatosVisualesDetailsPage />} />
+            <Route path="/acerca" exact element={<AboutPage />} />
+            <Route path="/contacto" exact element={<ContactPage />} />
+            <Route path="/proyectos" exact element={<ProjectsPage />} />
+            <Route path="/proyectos/entre-mujeres-y-el-barro" exact element={<EntreMujeresPage />} />
+            <Route path="/proyectos/taller-adentro" exact element={<TallerAdentroPage />} />
+            <Route path="/relatos" exact element={<RelatosVisualesPage />} />
+            <Route path="/relatos/lista" exact element={<RelatosVisualesListPage />} />
+            <Route path="/relatos/:id" element={<RelatosVisualesDetailsPage />} />
         </Routes>
     );
 };

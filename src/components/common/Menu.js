@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 import { AiOutlineClose } from 'react-icons/ai';
 import { useContextInfo } from 'hooks/ContextProvider';
@@ -24,14 +24,16 @@ const Button = ({ color, ...props }) => {
     );
 };
 
-const Menu = ({ color = 'green' }) => {
+const Menu = ({ color = 'green', history }) => {
     const { isMenuOpen, setIsMenuOpen } = useContextInfo();
+
+    const location = useLocation();
 
     return (
         <>
             <Button
                 color={color}
-                className={`${isMenuOpen ? 'hidden' : 'block'} z-40`}
+                className={clsx(isMenuOpen ? 'hidden' : 'block', location?.pathname === '/' && 'mt-8', 'z-40')}
                 onClick={() => setIsMenuOpen(true)}
             />
 
@@ -41,23 +43,25 @@ const Menu = ({ color = 'green' }) => {
                 } transition-all duration-300`}
             >
                 <div className="flex justify-between items-start">
-                    <Logo className="w-16 h-16" color="green" />
+                    <Link to="/" onClick={() => setIsMenuOpen(false)}>
+                        <Logo className="w-16 h-16" color="green" />
+                    </Link>
                     <AiOutlineClose className="cursor-pointer text-4xl z-50" onClick={() => setIsMenuOpen(false)} />
                 </div>
 
                 <nav className="row-start-2 row-end-7 w-5/6 justify-self-center">
                     <ul>
                         <li className="menu-link" onClick={() => setIsMenuOpen(false)}>
-                            <Link to="/about">Quien voy siendo</Link>
+                            <Link to="/acerca">Quien voy siendo</Link>
                         </li>
                         <li className="menu-link" onClick={() => setIsMenuOpen(false)}>
-                            <Link to="/projects">Proyectos</Link>
+                            <Link to="/proyectos">Proyectos</Link>
                         </li>
                         <li className="menu-link" onClick={() => setIsMenuOpen(false)}>
-                            <Link to="/gallery">Galeria</Link>
+                            <Link to="/relatos">Relatos audiovisuales</Link>
                         </li>
                         <li className="menu-link" onClick={() => setIsMenuOpen(false)}>
-                            <Link to="/contact">Contacto</Link>
+                            <Link to="/contacto">Contacto</Link>
                         </li>
                     </ul>
                 </nav>

@@ -30,15 +30,15 @@
     }
 
     .menu-link {
-        @apply font-secondary text-6xl text-center font-bold text-darkGreen hover:text-green 
+        @apply font-secondary text-7xl text-center lowercase font-bold text-darkGreen hover:text-green 
                 border-b-2 border-darkGreen hover:border-green mt-8 pb-4 transition-all duration-300;
     }
 }
 
 @font-face {
     font-family: 'SUNN-Line-Regular';
-    src: url('./assets/fonts/SUNN-Line-Free-Regular.otf') format('otf'),
-        url('./assets/fonts/SUNN-Line-Free-Regular.woff') format('woff');
+    src: url('./assets/fonts/SUNN-Line-Regular.otf') format('otf'),
+        url('./assets/fonts/SUNN-Line-Regular.woff') format('woff');
     font-weight: 400;
     font-display: swap;
     font-style: normal;
@@ -46,8 +46,8 @@
 
 @font-face {
     font-family: 'SUNN-Line-Bold';
-    src: url('./assets/fonts/SUNN-Line-Free-Bold.otf') format('otf'),
-        url('./assets/fonts/SUNN-Line-Free-Bold.woff') format('woff');
+    src: url('./assets/fonts/SUNN-Line-Bold.otf') format('otf'),
+        url('./assets/fonts/SUNN-Line-Bold.woff') format('woff');
     font-weight: 600;
     font-display: swap;
     font-style: normal;

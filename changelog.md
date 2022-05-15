@@ -1,6 +1,8 @@
 ### v0.3.0
 
 -   Feature: Add relatos visuales page and details page.
+-   Update: update single projects pages.
+-   Feature: Add relatos visuales description page.
 
 ### v0.2.0
 
