@@ -23,7 +23,7 @@ const Contact = (props) => {
 
             <div className="w-full row-start-3">
                 <p className="sm:text-[3vw] lowercase">Estemos en contacto</p>
-                <p className="text-[10vw] leading-[10vw] lowercase font-bold">Seamos redes</p>
+                <p className="text-[10vw] leading-[10vw] lowercase font-bold">Hagamos red</p>
             </div>
 
             <div className="grid grid-cols-2 gap-4 w-full row-start-5">

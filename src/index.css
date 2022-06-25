@@ -10,6 +10,9 @@
     *::-webkit-scrollbar {
         width: 0;
     }
+    html {
+        scroll-padding-top: 3rem;
+    }
     body {
         @apply font-primary bg-beige;
     }

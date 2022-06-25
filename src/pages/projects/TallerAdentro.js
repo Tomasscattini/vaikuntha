@@ -43,7 +43,7 @@ const EntreMujeresPage = () => {
                 <p className="text-xl my-20">{currentProject?.subtitle}</p>
 
                 {currentProject?.subdivisions?.map((subdivision, index, array) => (
-                    <div className="">
+                    <div id={subdivision.key} className="">
                         <h3 className="text-yellow text-center w-full text-5xl font-medium mb-20">
                             {subdivision?.id}-{subdivision?.title}
                         </h3>

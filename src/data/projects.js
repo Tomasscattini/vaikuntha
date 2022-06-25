@@ -3,9 +3,9 @@ import entreMujeres2 from 'assets/images/entre-mujeres2.jpg';
 import entreMujeres3 from 'assets/images/entre-mujeres3.jpg';
 import entreMujeresMain from 'assets/images/entre-mujeres-y-el-barro.jpg';
 import deLaIdeaAlHecho1 from 'assets/images/de-la-idea-al-hecho.jpg';
-import deLaIdeaAlHecho2 from 'assets/images/de-la-idea-al-hecho.jpg';
-import deLaIdeaAlHecho3 from 'assets/images/de-la-idea-al-hecho.jpg';
-import deLaIdeaAlHecho4 from 'assets/images/de-la-idea-al-hecho.jpg';
+import deLaIdeaAlHecho2 from 'assets/images/de-la-idea-al-hecho-2.jpg';
+import deLaIdeaAlHecho3 from 'assets/images/de-la-idea-al-hecho-3.jpg';
+import deLaIdeaAlHecho4 from 'assets/images/de-la-idea-al-hecho-4.jpg';
 import entreCodigos1 from 'assets/images/entre-codigos-1.jpg';
 import entreCodigos2 from 'assets/images/entre-codigos-2.jpg';
 
@@ -32,6 +32,7 @@ const projects = {
         subdivisions: [
             {
                 id: '1',
+                key: 'de-la-idea-al-hecho',
                 title: 'De la idea al hecho: se transita',
                 mainImage: deLaIdeaAlHecho1,
                 otherImages: [deLaIdeaAlHecho2, deLaIdeaAlHecho3, deLaIdeaAlHecho4],
@@ -46,6 +47,7 @@ const projects = {
             },
             {
                 id: '2',
+                key: 'entre-codigos',
                 title: 'Entre códigos, símbolos y poéticas materiales',
                 subtitle: 'Dialogando con el cielo y la tierra',
                 mainImage: entreCodigos1,

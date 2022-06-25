@@ -1,8 +1,15 @@
+### v0.5.0
+
+-   Update: Change name of relatos visuales and remove link to blog.
+
+### v0.4.0
+
+-   Update: update single projects pages.
+-   Feature: Add relatos visuales description page.
+
 ### v0.3.0
 
 -   Feature: Add relatos visuales page and details page.
--   Update: update single projects pages.
--   Feature: Add relatos visuales description page.
 
 ### v0.2.0
 

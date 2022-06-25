@@ -22,17 +22,11 @@ const RelatosVisualesPage = () => {
             <div className="bg-beige md:min-h-screen">
                 <div className="w-5/6 xl:w-4/6 mx-auto text-green py-20 md:h-[140vh]">
                     <h2 className="text-4xl font-bold font-primary">
-                        relatos <span className="relative top-12 font-secondary text-8xl">audiovisuales</span>
+                        relatos <span className="relative top-12 font-secondary text-8xl">visuales</span>
                     </h2>
 
-                    <div className="mt-32 mb-16">
-                        <Link className="flex items-center justify-center" to="/relatos/lista">
-                            <p className="uppercase border-b-2 border-green font-medium">ver relatos</p>
-                        </Link>
-                    </div>
-
-                    <div className="md:h-screen w-full flex justify-center">
-                        <img className="h-full" src={relatosMain} alt="relatos audiovisuales" />
+                    <div className="md:h-screen w-full flex justify-center mt-48">
+                        <img className="h-full" src={relatosMain} alt="relatos visuales" />
                     </div>
                 </div>
             </div>
