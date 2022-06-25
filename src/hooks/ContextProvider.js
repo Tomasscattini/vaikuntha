@@ -8,16 +8,16 @@ export const AppContextProvider = (props) => {
     const [colorScheme, setColorScheme] = useState('beige');
     const [isAppNameVisible, setIsAppNameVisible] = useState(false);
     const [isAppLogoVisible, setIsAppLogoVisible] = useState(false);
-    const [isLoadingRelatos, setIsLoadingRelatos] = useState(false);
+    const [isLoadingPosts, setIsLoadingPosts] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [hideInitialAnimation, setHideInitialAnimation] = useState(false);
-    const [relatosVisuales, setRelatosVisuales] = useState([]);
+    const [posts, setPosts] = useState([]);
 
-    const getRelatos = useCallback(async () => {
-        setIsLoadingRelatos(true);
+    const getPosts = useCallback(async () => {
+        setIsLoadingPosts(true);
         const response = await contentfulService.getAllPosts();
-        setRelatosVisuales(response?.items || []);
-        setIsLoadingRelatos(false);
+        setPosts(response?.items || []);
+        setIsLoadingPosts(false);
     }, []);
 
     useEffect(() => {
@@ -32,13 +32,13 @@ export const AppContextProvider = (props) => {
     const value = {
         colorScheme,
         getProjectInfo,
-        getRelatos,
+        getPosts,
         hideInitialAnimation,
         isAppLogoVisible,
         isAppNameVisible,
-        isLoadingRelatos,
+        isLoadingPosts,
         isMenuOpen,
-        relatosVisuales,
+        posts,
         setColorScheme,
         setIsAppLogoVisible,
         setIsAppNameVisible,

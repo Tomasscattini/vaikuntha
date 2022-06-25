@@ -2,11 +2,11 @@ import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 
-const RelatoCard = ({ className, id, item }) => {
+const PostCard = ({ className, id, item }) => {
     const { description, headerBg, thumbnail, title } = item;
 
     return (
-        <Link className={clsx(className, 'max-w-[300px] overflow-hidden')} to={`/relatos/${id}`}>
+        <Link className={clsx(className, 'max-w-[300px] overflow-hidden')} to={`/bitacora/${id}`}>
             <div className="h-[300px] w-full mx-auto">
                 <img
                     className="h-full object-cover"
@@ -20,4 +20,4 @@ const RelatoCard = ({ className, id, item }) => {
     );
 };
 
-export default RelatoCard;
+export default PostCard;

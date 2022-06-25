@@ -33,7 +33,7 @@ const RICHTEXT_OPTIONS = {
     }
 };
 
-const RelatosVisualesDetailsPage = () => {
+const PostDetailsPage = () => {
     const { id } = useParams();
 
     const { setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } = useContextInfo();
@@ -81,4 +81,4 @@ const RelatosVisualesDetailsPage = () => {
     );
 };
 
-export default RelatosVisualesDetailsPage;
+export default PostDetailsPage;

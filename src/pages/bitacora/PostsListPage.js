@@ -1,14 +1,14 @@
 import React, { useLayoutEffect } from 'react';
 import { useContextInfo } from 'hooks/ContextProvider';
-import RelatoCard from './RelatoCard';
+import PostCard from './PostCard';
 
-const RelatosVisualesListPage = () => {
-    const { getRelatos, isLoadingRelatos, relatosVisuales, setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } =
+const PostsListPage = () => {
+    const { getPosts, isLoadingPosts, posts, setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } =
         useContextInfo();
 
     useLayoutEffect(() => {
-        getRelatos();
-    }, [getRelatos]);
+        getPosts();
+    }, [getPosts]);
 
     useLayoutEffect(() => {
         setColorScheme('yellow');
@@ -22,10 +22,10 @@ const RelatosVisualesListPage = () => {
             <div className="w-5/6 xl:w-4/6 mx-auto">
                 <div className="py-20 min-h-[40vh]">
                     <h2 className="text-yellow text-4xl font-bold font-primary">
-                        relatos <span className="relative top-12 font-secondary text-8xl">audiovisuales</span>
+                        bitácora <span className="relative top-12 font-secondary text-8xl">relatos en movimiento</span>
                     </h2>
 
-                    <div className="text-beige text-lg">
+                    {/* <div className="text-beige text-lg">
                         <p className="mt-40">
                             Relatos Visuales es un proyecto donde eso que no tuvo lugar sale y se manifiesta con fuerza
                             animal.
@@ -34,15 +34,15 @@ const RelatosVisualesListPage = () => {
                             Deseamos que conecten con estos relatos/historias al igual que nosotras y llevarlos a
                             recorrer vidas y territorios.
                         </p>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="pb-40">
-                    {isLoadingRelatos && <div>Cargando...</div>}
+                    {isLoadingPosts && <div>Cargando...</div>}
 
-                    {relatosVisuales && (
+                    {posts && (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-                            {relatosVisuales.map((relato) => (
-                                <RelatoCard
+                            {posts.map((relato) => (
+                                <PostCard
                                     className="mb-20"
                                     id={relato?.sys?.id}
                                     item={relato?.fields}
@@ -57,4 +57,4 @@ const RelatosVisualesListPage = () => {
     );
 };
 
-export default RelatosVisualesListPage;
+export default PostsListPage;

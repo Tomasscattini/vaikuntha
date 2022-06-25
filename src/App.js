@@ -6,10 +6,10 @@ import {
     ContactPage,
     EntreMujeresPage,
     LandingPage,
+    PostDetailsPage,
+    PostsListPage,
     ProjectsPage,
     RelatosVisualesPage,
-    RelatosVisualesDetailsPage,
-    RelatosVisualesListPage,
     TallerAdentroPage
 } from 'pages';
 
@@ -23,8 +23,8 @@ const App = () => {
             <Route path="/proyectos/entre-mujeres-y-el-barro" exact element={<EntreMujeresPage />} />
             <Route path="/proyectos/taller-adentro" exact element={<TallerAdentroPage />} />
             <Route path="/proyectos/relatos-visuales" exact element={<RelatosVisualesPage />} />
-            <Route path="/relatos/lista" exact element={<RelatosVisualesListPage />} />
-            <Route path="/relatos/:id" element={<RelatosVisualesDetailsPage />} />
+            <Route path="/bitacora" exact element={<PostsListPage />} />
+            <Route path="/bitacora/:id" element={<PostDetailsPage />} />
         </Routes>
     );
 };

@@ -58,7 +58,7 @@ const Menu = ({ color = 'green', history }) => {
                             <Link to="/proyectos">Proyectos</Link>
                         </li>
                         <li className="menu-link" onClick={() => setIsMenuOpen(false)}>
-                            <Link to="/relatos">Relatos audiovisuales</Link>
+                            <Link to="/bitacora">Bitácora</Link>
                         </li>
                         <li className="menu-link" onClick={() => setIsMenuOpen(false)}>
                             <Link to="/contacto">Contacto</Link>
