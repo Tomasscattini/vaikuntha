@@ -1,16 +1,19 @@
 import React, { useLayoutEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useContextInfo } from 'hooks/ContextProvider';
 
+import arrowBack from 'assets/images/arrow-back.svg';
 import relatosMain from 'assets/images/relatos-main.jpg';
 import relatosOne from 'assets/images/relatos1.jpg';
 import relatosTwo from 'assets/images/relatos2.jpg';
-import relatosThree from 'assets/images/relatos3.jpg';
 
 const RelatosVisualesPage = () => {
     const { setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } = useContextInfo();
 
+    const navigate = useNavigate();
+
     useLayoutEffect(() => {
+        window.scroll(0, 0);
         setColorScheme('green');
         setIsAppLogoVisible(true);
         setIsAppNameVisible(true);
@@ -21,11 +24,24 @@ const RelatosVisualesPage = () => {
         <div className="lg:text-xl lg:leading-10 font-medium">
             <div className="bg-beige md:min-h-screen">
                 <div className="w-5/6 xl:w-4/6 mx-auto text-green py-20 md:h-[140vh]">
-                    <h2 className="text-4xl font-bold font-primary">
-                        relatos <span className="relative top-12 font-secondary text-8xl">visuales</span>
-                    </h2>
+                    <div onClick={() => navigate('/proyectos')} className="relative cursor-pointer z-50">
+                        <img src={arrowBack} alt="" />
+                    </div>
 
-                    <div className="md:h-screen w-full flex justify-center mt-48">
+                    <div className="flex items-center">
+                        <span
+                            className="grid place-content-center shrink-0 bg-green text-darkGreen 
+                                                font-secondary text-2xl font-bold rounded-full w-8 h-8 
+                                                mt-12 mr-8"
+                        >
+                            3
+                        </span>
+                        <h2 className="text-4xl font-bold font-primary">
+                            relatos <span className="relative top-12 font-secondary text-8xl">visuales</span>
+                        </h2>
+                    </div>
+
+                    <div className="md:h-screen w-full flex justify-center mt-36">
                         <img className="h-full" src={relatosMain} alt="relatos visuales" />
                     </div>
                 </div>
@@ -84,10 +100,6 @@ const RelatosVisualesPage = () => {
                         Es la conexión con la tierra, el todo y los saberes, la magia, la maga, la bruja del monte.
                     </p>
                 </div>
-            </div>
-
-            <div className="w-full h-screen">
-                <img src={relatosThree} alt="relatos audiovisuales 3" className="w-full h-full object-cover" />
             </div>
         </div>
     );

@@ -8,6 +8,7 @@ import deLaIdeaAlHecho3 from 'assets/images/de-la-idea-al-hecho-3.jpg';
 import deLaIdeaAlHecho4 from 'assets/images/de-la-idea-al-hecho-4.jpg';
 import entreCodigos1 from 'assets/images/entre-codigos-1.jpg';
 import entreCodigos2 from 'assets/images/entre-codigos-2.jpg';
+import relatos1 from 'assets/images/relatos3.jpg';
 
 const projects = {
     'entre-mujeres-y-el-barro': {
@@ -62,6 +63,15 @@ const projects = {
                 ]
             }
         ]
+    },
+    'relatos-visuales': {
+        id: '3',
+        title: 'Relatos visuales',
+        mainImage: relatos1,
+        email: 'relatosvisuales@gmail.com',
+        uri: '/proyectos/relatos-visuales',
+        abstract:
+            'Relatos visuales es un proyecto colectivo colaborativo de lenguaje plástico/visual, donde buscamos, a partir de la experiencia del trabajo de campo por medio de entrevistas en un compartir fluido con les protagonistas de esta narrativa, visibilizar, revalorizar y poner en dialogo con el contexto actual, historias que hacen a nuestra cultura regional, que están impresas en las memorias corporales y constituyen también nuestras subjetividades.'
     }
 };
 

@@ -124,6 +124,39 @@ const Projects = () => {
                             </div>
                         </div>
                     ))}
+
+                    <hr className="border-0 h-[2px] bg-green my-20" />
+
+                    <div className="grid grid-cols-11 mb-20">
+                        <div className="col-start-1 col-end-7">
+                            <img
+                                ref={imageOneRef}
+                                className="rotate-[-6deg] hover:rotate-0 transition-all duration-300"
+                                src={projects['relatos-visuales']?.mainImage}
+                                alt="Entre mujeres y el barro"
+                            />
+                        </div>
+                        <div className="col-start-8 col-end-12">
+                            <div className="flex">
+                                <span
+                                    className="grid place-content-center shrink-0 bg-yellow text-green 
+                                                font-secondary text-2xl font-bold rounded-full w-8 h-8 
+                                                my-2 mr-2"
+                                >
+                                    {projects['relatos-visuales']?.id}
+                                </span>
+                                <h3 className="text-3xl font-primary font-medium lowercase">
+                                    {projects['relatos-visuales']?.title}
+                                </h3>
+                            </div>
+                            <p className="my-4">{projects['relatos-visuales']?.abstract}</p>
+
+                            <Link to={projects['relatos-visuales']?.uri} className="flex items-center">
+                                <span className="uppercase pb-1 border-b-2">descubrir</span>
+                                <img src={arrowOpen} alt="" className="ml-4" />
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,6 +1,7 @@
 ### v0.5.0
 
 -   Update: Change name of relatos visuales and remove link to blog.
+-   Feature: Move relatos visuales to projects and style it like the other ones.
 
 ### v0.4.0
 
