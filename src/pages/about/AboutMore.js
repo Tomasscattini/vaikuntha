@@ -11,15 +11,15 @@ import drawing2 from 'assets/images/drawing-2.svg';
 const AboutMore = () => {
     return (
         <>
-            <div className="snap-start h-screen w-[80vw] mx-auto translate-y-[-5vh] overflow-hidden">
+            <div className="snap-start h-[50vh] w-auto md:h-screen md:w-[80vw] mx-auto translate-y-[-5vh] overflow-hidden">
                 <img className="object-cover min-h-full min-w-full" src={about4} alt="" />
             </div>
 
             <div
                 id="more"
-                className="snap-start relative h-[200vh] w-full text-green  text-[1.4rem] leading-8 font-medium"
+                className="snap-start relative md:h-[200vh] w-full my-24 md:my-auto text-green text-sm md:text-[1.4rem] md:leading-8 font-medium"
             >
-                <div className="absolute flex items-center justify-center z-0 bottom-16 left-16 max-w-1/2 h-2/3 overflow-hidden">
+                <div className="hidden absolute md:flex items-center justify-center z-0 bottom-16 left-16 max-w-1/2 h-2/3 overflow-hidden">
                     <img className="w-full" src={about5} alt="" />
                 </div>
                 <div className="relative z-10 w-4/6 mx-auto grow-0 pt-2">
@@ -32,7 +32,7 @@ const AboutMore = () => {
                         voy siendo.
                     </p>
                 </div>
-                <div className="relative mt-[10%] mr-48 z-10 w-[50%] float-right">
+                <div className="relative mt-[10%] mx-auto md:mr-48 z-10 w-4/6 md:w-[50%] md:float-right">
                     <p className="my-8">
                         Paralelamente lo Social comenzaba a inquietarme, observar el entorno, buscar comprender las
                         complejas tramas que nos tejen. Latir lo comunitario, habitar los territorios. Fue así que
@@ -59,11 +59,11 @@ const AboutMore = () => {
             </div>
 
             <div className="snap-start min-h-screen w-full bg-green">
-                <div className="w-4/6 mx-auto flex flex-col justify-center items-center">
-                    <div className="h-[70vh] mt-52 mb-24 w-full flex items-center overflow-hidden">
+                <div className="w-5/6 md:w-4/6 mx-auto flex flex-col justify-center items-center">
+                    <div className="h-[50vh] md:h-[70vh] my-4 md:mt-52 md:mb-24 w-full flex items-center overflow-hidden">
                         <img className="w-full object-cover mt-32" src={about6} alt="" />
                     </div>
-                    <div className="text-yellow  text-[1.4rem] leading-8">
+                    <div className="text-yellow text-sm md:text-[1.4rem] md:leading-8">
                         <p className="my-8">
                             Me formé y sigo formando con varias y varios maestrxs del oficio, alfarerxs de legado
                             ancestral de diversas culturas, encuentros donde el saber y el compartir circulan entre
@@ -102,7 +102,7 @@ const AboutMore = () => {
                         </div>
                     </div>
                 </div>
-                <HashLink to="#top" className="absolute z-20 bottom-16 right-32 cursor-pointer rotate-180">
+                <HashLink to="#top" className="absolute z-20 bottom-16 right-4 md:right-32 cursor-pointer rotate-180">
                     <img src={arrowIcon} alt="" />
                 </HashLink>
             </div>

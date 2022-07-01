@@ -1,9 +1,15 @@
 ._2R-kh {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 10px;
 }
+@media screen and (min-width: 640px) {
+    ._2R-kh {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
 ._wPDyp {
     margin: 5px;
     display: block;

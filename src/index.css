@@ -33,7 +33,7 @@
     }
 
     .menu-link {
-        @apply font-secondary text-7xl text-center lowercase font-bold text-darkGreen hover:text-green 
+        @apply font-secondary text-4xl md:text-7xl text-center lowercase font-bold text-darkGreen hover:text-green 
                 border-b-2 border-darkGreen hover:border-green mt-8 pb-4 transition-all duration-300;
     }
 }

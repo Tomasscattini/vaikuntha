@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import { useContextInfo } from 'hooks/ContextProvider';
+import clsx from 'clsx';
 
 import arrowOpen from 'assets/images/arrow-open.svg';
 import projects from 'data/projects';
@@ -37,25 +38,27 @@ const Projects = () => {
     return (
         <div className="min-h-screen">
             <div className="w-5/6 xl:w-4/6 mx-auto py-20 text-green">
-                <div className="pb-32">
-                    <h2 className="text-yellow font-primary text-5xl font-bold mt-24">proyectos</h2>
-                    <h3 className="text-green text-4xl font-bold font-primary ml-40">
+                <div className="pb-8 md:pb-32">
+                    <h2 className="text-yellow font-primary text-3xl md:text-5xl font-bold mt-24">proyectos</h2>
+                    <h3 className="text-green text-2xl md:text-4xl font-bold font-primary ml-20 md:ml-40">
                         despliegues <br />
-                        <span className="relative top-2 ml-48 font-secondary text-8xl leading-3">creativos</span>
+                        <span className="relative md:top-2 ml-36 md:ml-48 font-secondary text-4xl md:text-8xl md:leading-3">
+                            creativos
+                        </span>
                     </h3>
                 </div>
 
                 <div className="pt-8 pb-20">
-                    <div className="grid grid-cols-11 mb-20">
-                        <div className="col-start-1 col-end-7">
+                    <div className="md:grid md:grid-cols-11 mb-20">
+                        <div className="col-start-1 col-end-7 mb-16 md:mb-auto">
                             <img
                                 ref={imageOneRef}
-                                className="rotate-[-6deg] hover:rotate-0 transition-all duration-300"
+                                className="md:rotate-[-6deg] hover:rotate-0 transition-all duration-300"
                                 src={projects['entre-mujeres-y-el-barro']?.mainImage}
                                 alt="Entre mujeres y el barro"
                             />
                         </div>
-                        <div className="col-start-8 col-end-12">
+                        <div className="md:col-start-8 md:col-end-12">
                             <div className="flex">
                                 <span
                                     className="grid place-content-center shrink-0 bg-yellow text-green 
@@ -90,16 +93,19 @@ const Projects = () => {
                         <h3 className="text-3xl font-primary font-medium">{projects['taller-adentro']?.title}</h3>
                     </div>
                     {projects['taller-adentro']?.subdivisions?.map((subdivision, index) => (
-                        <div key={subdivision?.email} className="grid grid-cols-11 mb-48">
+                        <div key={subdivision?.email} className="md:grid md:grid-cols-11 mb-16 md:mb-48">
                             <div
-                                className={
-                                    index % 2 === 0 ? 'row-start-1 col-start-6 col-end-12' : 'col-start-1 col-end-7'
-                                }
+                                className={clsx(
+                                    'mb-16 md:mb-auto',
+                                    index % 2 === 0
+                                        ? 'md:row-start-1 md:col-start-6 md:col-end-12'
+                                        : 'md:col-start-1 md:col-end-7'
+                                )}
                             >
                                 <img
                                     ref={index === 0 ? imageTwoRef : imageThreeRef}
                                     className={`${
-                                        index % 2 === 0 ? 'rotate-[-3deg]' : 'rotate-[7deg]'
+                                        index % 2 === 0 ? 'md:rotate-[-3deg]' : 'md:rotate-[7deg]'
                                     } hover:rotate-0 transition-all duration-300`}
                                     src={subdivision?.mainImage}
                                     alt={subdivision?.title}
@@ -107,7 +113,9 @@ const Projects = () => {
                             </div>
                             <div
                                 className={
-                                    index % 2 === 0 ? 'row-start-1 col-start-1 col-end-5' : 'col-start-8 col-end-12'
+                                    index % 2 === 0
+                                        ? 'md:row-start-1 md:col-start-1 md:col-end-5'
+                                        : 'md:col-start-8 md:col-end-12'
                                 }
                             >
                                 <div className="flex items-center">
@@ -127,16 +135,16 @@ const Projects = () => {
 
                     <hr className="border-0 h-[2px] bg-green my-20" />
 
-                    <div className="grid grid-cols-11 mb-20">
-                        <div className="col-start-1 col-end-7">
+                    <div className="md:grid md:grid-cols-11 mb-20">
+                        <div className="md:col-start-1 md:col-end-7 mb-16 md:mb-auto">
                             <img
                                 ref={imageOneRef}
-                                className="rotate-[-6deg] hover:rotate-0 transition-all duration-300"
+                                className="md:rotate-[-6deg] hover:rotate-0 transition-all duration-300"
                                 src={projects['relatos-visuales']?.mainImage}
                                 alt="Entre mujeres y el barro"
                             />
                         </div>
-                        <div className="col-start-8 col-end-12">
+                        <div className="md:col-start-8 md:col-end-12">
                             <div className="flex">
                                 <span
                                     className="grid place-content-center shrink-0 bg-yellow text-green 

@@ -1,3 +1,7 @@
+### v0.6.0
+
+-   Feature: Make responsive.
+
 ### v0.5.0
 
 -   Update: Change name of relatos visuales and remove link to blog.

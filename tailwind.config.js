@@ -46,6 +46,13 @@ module.exports = {
             'translate-word-2': {
                 '99%': { 'font-family': 'Poppins', 'font-size': '3.5rem' },
                 '100%': { top: '1.2rem', right: '-28rem', 'font-family': 'SUNN-Line-Regular', 'font-size': '10rem' }
+            },
+            'translate-word-1-small': {
+                '100%': { top: '1.2rem', right: '-4rem' }
+            },
+            'translate-word-2-small': {
+                '99%': { 'font-family': 'Poppins', 'font-size': '3.5rem' },
+                '100%': { top: '2rem', right: '-13rem', 'font-family': 'SUNN-Line-Regular', 'font-size': '6rem' }
             }
         },
         animation: {
@@ -54,7 +61,9 @@ module.exports = {
             fade: 'fade 1.5s linear forwards',
             'fade-linear': 'fade-linear 1s linear 1s forwards',
             'translate-word-1': 'translate-word-1 2s linear forwards',
-            'translate-word-2': 'translate-word-2 2s linear forwards'
+            'translate-word-2': 'translate-word-2 2s linear forwards',
+            'translate-word-1-small': 'translate-word-1-small 2s linear forwards',
+            'translate-word-2-small': 'translate-word-2-small 2s linear forwards'
         }
     },
     plugins: [require('@tailwindcss/line-clamp')],

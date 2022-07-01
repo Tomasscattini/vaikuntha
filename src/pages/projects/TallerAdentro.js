@@ -36,29 +36,29 @@ const EntreMujeresPage = () => {
                         {currentProject?.id}
                     </span>
 
-                    <h2 className="font-primary text-center text-yellow w-full text-6xl font-medium">
+                    <h2 className="font-primary text-center text-yellow w-full text-4xl md:text-6xl font-medium">
                         {currentProject?.title}
                     </h2>
                 </div>
-                <p className="text-xl my-20">{currentProject?.subtitle}</p>
+                <p className="text-sm md:text-xl my-8 md:my-20">{currentProject?.subtitle}</p>
 
                 {currentProject?.subdivisions?.map((subdivision, index, array) => (
                     <div id={subdivision.key} className="">
-                        <h3 className="text-yellow text-center w-full text-5xl font-medium mb-20">
+                        <h3 className="text-yellow text-center w-full text-4xl md:text-5xl font-medium mb-20">
                             {subdivision?.id}-{subdivision?.title}
                         </h3>
-                        <p className="text-lg">{subdivision?.description?.[0]}</p>
+                        <p className="text-sm md:text-lg">{subdivision?.description?.[0]}</p>
 
-                        <div className="my-20 grid grid-cols-2 gap-10">
+                        <div className="my-20 md:grid md:grid-cols-2 md:gap-10">
                             <div className="w-full" key={index}>
                                 <img
                                     src={subdivision?.mainImage}
                                     alt=""
-                                    className="w-full rotate-[6deg] hover:rotate-0 transition-all duration-300"
+                                    className="w-full md:rotate-[6deg] hover:rotate-0 transition-all duration-300"
                                 />
                             </div>
                             {subdivision?.otherImages?.map((img, index) => (
-                                <div className="w-full" key={index}>
+                                <div className="hidden md:inline-block w-full" key={index}>
                                     <img
                                         src={img}
                                         alt=""
@@ -70,7 +70,7 @@ const EntreMujeresPage = () => {
                             ))}
                         </div>
 
-                        <p className="text-lg">{subdivision?.description?.[1]}</p>
+                        <p className="text-sm md:text-lg">{subdivision?.description?.[1]}</p>
                         <div className="flex items-center text-yellow uppercase float-right mt-16">
                             <a
                                 className="border-b-2"

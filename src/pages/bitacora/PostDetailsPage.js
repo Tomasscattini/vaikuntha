@@ -29,7 +29,9 @@ const RICHTEXT_OPTIONS = {
                 );
         },
         [BLOCKS.PARAGRAPH]: (node, children) => <p className="text-green my-3">{children}</p>,
-        [BLOCKS.HEADING_4]: (node, children) => <h4 className="font-primary text-orange text-4xl my-16">{children}</h4>
+        [BLOCKS.HEADING_4]: (node, children) => (
+            <h4 className="font-primary text-orange text-3xl md:text-4xl my-16">{children}</h4>
+        )
     }
 };
 
@@ -69,7 +71,7 @@ const PostDetailsPage = () => {
                     alt={post?.headerBg?.fields?.title}
                 />
                 <div className="absolute bottom-0 left-0 w-screen">
-                    <h1 className="text-5xl font-primary text-orange lowercase mb-20 w-5/6 xl:w-4/6 mx-auto z-20">
+                    <h1 className="text-4xl md:text-5xl font-primary text-orange lowercase mb-20 w-5/6 xl:w-4/6 mx-auto z-20">
                         {post?.title}
                     </h1>
                 </div>

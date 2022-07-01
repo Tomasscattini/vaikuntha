@@ -11,7 +11,7 @@ const LandingPage = (props) => {
     const bodyRef = useRef();
 
     useLayoutEffect(() => {
-        setColorScheme('green');
+        setColorScheme('yellow');
         setIsAppLogoVisible(false);
         setIsAppNameVisible(false);
         // eslint-disable-next-line
@@ -38,9 +38,9 @@ const LandingPage = (props) => {
             {!hideInitialAnimation && <InitialAnimation />}
             <div className="flex justify-center items-end h-[101vh] py-16 ">
                 <div className="text-center">
-                    <Logo className="w-60 h-60 mx-auto mb-[5vh]" color="yellow" />
-                    <h1 className="text-9xl font-bold text-yellow uppercase">Vaikuntha</h1>
-                    <p className="text-3xl text-yellow font-secondary font-medium">
+                    <Logo className="w-40 h-40 md:w-60 md:h-60 mx-auto mb-[5vh]" color="yellow" />
+                    <h1 className="text-7xl md:text-9xl font-bold text-yellow uppercase">Vaikuntha</h1>
+                    <p className="text-2xl md:text-3xl text-yellow font-secondary font-medium">
                         Arte ceramico, relatos visuales y brujerias del bien
                     </p>
                 </div>
