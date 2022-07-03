@@ -1,3 +1,7 @@
+### v0.7.0
+
+-   Feature: Add instagram feed to each project.
+
 ### v0.6.0
 
 -   Feature: Make responsive.

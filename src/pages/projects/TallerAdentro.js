@@ -1,11 +1,14 @@
 import React, { useLayoutEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useContextInfo } from 'hooks/ContextProvider';
+import InstagramFeed from 'react-ig-feed';
+import './ig-feed.css';
 
 import projects from 'data/projects';
 
 import arrowBack from 'assets/images/arrow-back-yellow.svg';
 import arrowOpen from 'assets/images/arrow-open-yellow.svg';
+import instagramLogo from 'assets/images/instagram-yellow.svg';
 
 const EntreMujeresPage = () => {
     const { setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } = useContextInfo();
@@ -21,8 +24,8 @@ const EntreMujeresPage = () => {
         // eslint-disable-next-line
     }, []);
     return (
-        <div className="min-h-screen bg-green text-beige">
-            <div className="w-5/6 xl:w-4/6 mx-auto pt-24 pb-48">
+        <div className="min-h-screen bg-green text-beige pb-48">
+            <div className="w-5/6 xl:w-4/6 mx-auto pt-24 pb-16">
                 <div onClick={() => navigate('/proyectos')} className="cursor-pointer mb-12">
                     <img src={arrowBack} alt="" />
                 </div>
@@ -85,6 +88,15 @@ const EntreMujeresPage = () => {
                         {index !== array.length - 1 && <hr className="border-0 w-full h-[2px] bg-yellow mt-40 mb-20" />}
                     </div>
                 ))}
+            </div>
+
+            <div className="flex items-center justify-center w-full mt-16 md:mt-32 mb-16">
+                <img className="mr-4 h-8" src={instagramLogo} alt="" />
+                <span className="text-yellow font-medium text-xl">seguinos en instagram</span>
+            </div>
+
+            <div className="w-5/6 xl:w-4/6 mx-auto min-h-screen">
+                <InstagramFeed token={currentProject?.instagramToken} counter="9" />
             </div>
         </div>
     );

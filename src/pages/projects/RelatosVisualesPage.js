@@ -1,8 +1,11 @@
 import React, { useLayoutEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useContextInfo } from 'hooks/ContextProvider';
+import InstagramFeed from 'react-ig-feed';
+import './ig-feed.css';
 
 import arrowBack from 'assets/images/arrow-back.svg';
+import instagramLogo from 'assets/images/instagram-green.svg';
 import relatosMain from 'assets/images/relatos-main.jpg';
 import relatosOne from 'assets/images/relatos1.jpg';
 import relatosTwo from 'assets/images/relatos2.jpg';
@@ -21,7 +24,7 @@ const RelatosVisualesPage = () => {
     }, []);
 
     return (
-        <div className="lg:text-xl lg:leading-10 font-medium">
+        <div className="lg:text-xl lg:leading-10 font-medium pb-48">
             <div className="bg-beige md:min-h-screen">
                 <div className="w-5/6 xl:w-4/6 mx-auto text-green py-20 md:h-[140vh]">
                     <div onClick={() => navigate('/proyectos')} className="relative cursor-pointer z-50">
@@ -86,7 +89,7 @@ const RelatosVisualesPage = () => {
                 <img src={relatosTwo} alt="relatos audiovisuales 2" className="w-full h-full object-cover" />
             </div>
 
-            <div className="bg-beige text-green w-full py-16 md:py-48">
+            <div className="bg-beige text-green w-full py-16 md:pt-48">
                 <div className="w-5/6 xl:w-4/6 mx-auto flex items-center justify-center">
                     <p>
                         Ser MESTIZAS en tiempos contemporáneos, cambios de escenario, de tiempos y de costumbres
@@ -101,6 +104,15 @@ const RelatosVisualesPage = () => {
                         Es la conexión con la tierra, el todo y los saberes, la magia, la maga, la bruja del monte.
                     </p>
                 </div>
+            </div>
+
+            <div className="flex items-center justify-center w-full mt-16 md:mt-32 mb-16">
+                <img className="mr-4 h-8" src={instagramLogo} alt="" />
+                <span className="text-green font-medium text-xl">seguinos en instagram</span>
+            </div>
+
+            <div className="w-5/6 xl:w-4/6 mx-auto min-h-screen">
+                <InstagramFeed token={process.env.REACT_APP_RELATOS_VISUALES_INSTAGRAM_TOKEN} counter="9" />
             </div>
         </div>
     );

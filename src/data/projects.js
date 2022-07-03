@@ -18,6 +18,7 @@ const projects = {
         image1: entreMujeres1,
         image2: entreMujeres2,
         image3: entreMujeres3,
+        instagramToken: process.env.REACT_APP_ENTRE_MUJERES_INSTAGRAM_TOKEN,
         email: 'entremujeresyelbarro@gmail.com',
         uri: '/proyectos/entre-mujeres-y-el-barro',
         abstract:
@@ -30,6 +31,7 @@ const projects = {
         id: '2',
         title: 'Taller Adentro',
         subtitle: 'Conoce nuestras propuestas',
+        instagramToken: process.env.REACT_APP_TALLER_ADENTRO_INSTAGRAM_TOKEN,
         subdivisions: [
             {
                 id: '1',

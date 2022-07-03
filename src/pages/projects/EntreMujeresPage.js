@@ -7,7 +7,7 @@ import './ig-feed.css';
 import projects from 'data/projects';
 
 import arrowBack from 'assets/images/arrow-back.svg';
-import instagramLogo from 'assets/images/instagram.png';
+import instagramLogo from 'assets/images/instagram-yellow.svg';
 
 const EntreMujeresPage = () => {
     const { setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } = useContextInfo();
@@ -58,7 +58,7 @@ const EntreMujeresPage = () => {
                 </div>
             </div>
 
-            <div className="bg-green h-full">
+            <div className="bg-green h-full pb-48">
                 <div className="w-5/6 xl:w-4/6 mx-auto pt-16 md:pt-52 text-sm md:text-xl text-beige">
                     <p>{currentProject?.abstract}</p>
                 </div>
@@ -81,7 +81,7 @@ const EntreMujeresPage = () => {
                 </div>
 
                 <div className="w-5/6 xl:w-4/6 mx-auto min-h-screen">
-                    <InstagramFeed token={process.env.REACT_APP_INSTAGRAM_TOKEN} counter="9" />
+                    <InstagramFeed token={currentProject?.instagramToken} counter="9" />
                 </div>
             </div>
         </>

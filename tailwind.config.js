@@ -51,8 +51,8 @@ module.exports = {
                 '100%': { top: '1.2rem', right: '-4rem' }
             },
             'translate-word-2-small': {
-                '99%': { 'font-family': 'Poppins', 'font-size': '3.5rem' },
-                '100%': { top: '2rem', right: '-13rem', 'font-family': 'SUNN-Line-Regular', 'font-size': '6rem' }
+                '99%': { 'font-family': 'Poppins', 'font-size': '2rem' },
+                '100%': { top: '3rem', right: '-15rem', 'font-family': 'SUNN-Line-Regular', 'font-size': '3rem' }
             }
         },
         animation: {
