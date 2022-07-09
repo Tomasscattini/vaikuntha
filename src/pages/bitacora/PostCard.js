@@ -14,7 +14,7 @@ const PostCard = ({ className, id, item }) => {
                     alt={thumbnail?.fields?.title || headerBg?.fields?.title}
                 />
             </div>
-            <h3 className="font-primary text-orange text-xl font-medium lowercase">{title}</h3>
+            <h3 className="font-primary text-orange text-xl font-medium lowercase my-4">{title}</h3>
             <p className="line-clamp-2 text-beige">{description}</p>
         </Link>
     );

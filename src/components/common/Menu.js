@@ -33,12 +33,12 @@ const Menu = ({ color = 'green', history }) => {
         <>
             <Button
                 color={color}
-                className={clsx(isMenuOpen ? 'hidden' : 'block', location?.pathname === '/' && 'mt-8', 'z-40')}
+                className={clsx(isMenuOpen ? 'hidden' : 'block', location?.pathname === '/' && 'mt-8', 'z-60')}
                 onClick={() => setIsMenuOpen(true)}
             />
 
             <div
-                className={`fixed w-screen h-screen top-0 bg-beige z-40 p-8 grid grid-rows-6 ${
+                className={`fixed w-screen h-screen top-0 bg-beige z-60 p-8 grid grid-rows-6 ${
                     isMenuOpen ? 'opacity-100 left-0' : 'opacity-0 left-[100vw]'
                 } transition-all duration-300`}
             >
@@ -46,7 +46,10 @@ const Menu = ({ color = 'green', history }) => {
                     <Link to="/" onClick={() => setIsMenuOpen(false)}>
                         <Logo className="w-16 h-16" color="green" />
                     </Link>
-                    <AiOutlineClose className="cursor-pointer text-4xl z-50" onClick={() => setIsMenuOpen(false)} />
+                    <AiOutlineClose
+                        className="text-darkGreen cursor-pointer text-4xl z-50"
+                        onClick={() => setIsMenuOpen(false)}
+                    />
                 </div>
 
                 <nav className="row-start-2 row-end-7 w-5/6 justify-self-center">

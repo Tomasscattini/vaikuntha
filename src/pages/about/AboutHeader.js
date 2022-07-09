@@ -14,7 +14,7 @@ const AboutHeader = () => {
                         voy
                     </span>
                     &nbsp;
-                    <span className="absolute right-0 top-24 font-bold animate-translate-word-2-small md:animate-translate-word-2">
+                    <span className="absolute font-bold animate-translate-word-2-small md:animate-translate-word-2">
                         siendo
                     </span>
                 </h2>

@@ -13,6 +13,7 @@ const Projects = () => {
     const imageOneRef = useRef();
     const imageTwoRef = useRef();
     const imageThreeRef = useRef();
+    const imageFourRef = useRef();
 
     useLayoutEffect(() => {
         window.scroll(0, 0);
@@ -24,16 +25,19 @@ const Projects = () => {
 
     useEffect(() => {
         document.addEventListener('scroll', () => {
-            if (!(imageOneRef?.current && imageTwoRef?.current && imageThreeRef?.current)) return;
-            [imageOneRef.current, imageTwoRef.current, imageThreeRef.current].forEach((ref) => {
+            if (!(imageOneRef?.current && imageTwoRef?.current && imageThreeRef?.current && imageFourRef?.current))
+                return;
+            [imageOneRef.current, imageTwoRef.current, imageThreeRef.current, imageFourRef.current].forEach((ref) => {
                 if (window.screen.height / 2 >= ref.getBoundingClientRect()?.top) {
-                    ref.classList.add('rotate-0');
+                    ref.style.transform = 'rotate(0)';
+                } else {
+                    ref.style.transform = `rotate(${ref.classList?.[0]})`;
                 }
             });
         });
 
         return () => document.removeEventListener('scroll', () => console.log('clean'));
-    }, [imageOneRef, imageTwoRef, imageThreeRef]);
+    }, [imageOneRef, imageTwoRef, imageThreeRef, imageFourRef]);
 
     return (
         <div className="min-h-screen">
@@ -42,7 +46,7 @@ const Projects = () => {
                     <h2 className="text-yellow font-primary text-3xl md:text-5xl font-bold mt-24">proyectos</h2>
                     <h3 className="text-green text-2xl md:text-4xl font-bold font-primary ml-20 md:ml-40">
                         despliegues <br />
-                        <span className="relative md:top-2 ml-36 md:ml-48 font-secondary text-4xl md:text-8xl md:leading-3">
+                        <span className="relative leading-5 md:top-2 ml-28 md:ml-48 font-secondary text-6xl md:text-8xl md:leading-3">
                             creativos
                         </span>
                     </h3>
@@ -50,16 +54,16 @@ const Projects = () => {
 
                 <div className="pt-8 pb-20">
                     <div className="md:grid md:grid-cols-11 mb-20">
-                        <div className="col-start-1 col-end-7 mb-16 md:mb-auto">
+                        <div className="hidden md:block col-start-1 col-end-7 mb-16 md:mb-auto">
                             <img
                                 ref={imageOneRef}
-                                className="md:rotate-[-6deg] hover:rotate-0 transition-all duration-300"
+                                className="-6deg hover:rotate-0 transition-all duration-300"
                                 src={projects['entre-mujeres-y-el-barro']?.mainImage}
-                                alt="Entre mujeres y el barro"
+                                alt={projects['entre-mujeres-y-el-barro']?.title}
                             />
                         </div>
                         <div className="md:col-start-8 md:col-end-12">
-                            <div className="flex">
+                            <div className="flex items-center">
                                 <span
                                     className="grid place-content-center shrink-0 bg-yellow text-green 
                                                 font-secondary text-2xl font-bold rounded-full w-8 h-8 
@@ -67,15 +71,26 @@ const Projects = () => {
                                 >
                                     {projects['entre-mujeres-y-el-barro']?.id}
                                 </span>
-                                <h3 className="text-3xl font-primary font-medium lowercase">
+                                <h3 className="text-xl leading-5 md:text-3xl font-primary font-semibold">
                                     {projects['entre-mujeres-y-el-barro']?.title}
                                 </h3>
                             </div>
+
+                            <div className="md:hidden my-16">
+                                <img
+                                    src={projects['entre-mujeres-y-el-barro']?.mainImage}
+                                    alt={projects['entre-mujeres-y-el-barro']?.title}
+                                />
+                            </div>
+
                             <p className="my-4">{projects['entre-mujeres-y-el-barro']?.abstract}</p>
 
-                            <Link to={projects['entre-mujeres-y-el-barro']?.uri} className="flex items-center">
-                                <span className="uppercase pb-1 border-b-2">descubrir</span>
-                                <img src={arrowOpen} alt="" className="ml-4" />
+                            <Link
+                                to={projects['entre-mujeres-y-el-barro']?.uri}
+                                className="flex items-center justify-end"
+                            >
+                                <span className="uppercase text-sm font-semibold pb-1 border-b-2">descubrir</span>
+                                <img src={arrowOpen} alt="" className="ml-4 h-4 w-4" />
                             </Link>
                         </div>
                     </div>
@@ -90,13 +105,15 @@ const Projects = () => {
                         >
                             {projects['taller-adentro']?.id}
                         </span>
-                        <h3 className="text-3xl font-primary font-medium">{projects['taller-adentro']?.title}</h3>
+                        <h3 className="text-xl leading-5 md:text-3xl font-primary font-semibold">
+                            {projects['taller-adentro']?.title}
+                        </h3>
                     </div>
                     {projects['taller-adentro']?.subdivisions?.map((subdivision, index) => (
                         <div key={subdivision?.email} className="md:grid md:grid-cols-11 mb-16 md:mb-48">
                             <div
                                 className={clsx(
-                                    'mb-16 md:mb-auto',
+                                    'hidden md:block mb-16 md:mb-auto',
                                     index % 2 === 0
                                         ? 'md:row-start-1 md:col-start-6 md:col-end-12'
                                         : 'md:col-start-1 md:col-end-7'
@@ -105,7 +122,7 @@ const Projects = () => {
                                 <img
                                     ref={index === 0 ? imageTwoRef : imageThreeRef}
                                     className={`${
-                                        index % 2 === 0 ? 'md:rotate-[-3deg]' : 'md:rotate-[7deg]'
+                                        index % 2 === 0 ? '-3deg' : '7deg'
                                     } hover:rotate-0 transition-all duration-300`}
                                     src={subdivision?.mainImage}
                                     alt={subdivision?.title}
@@ -119,15 +136,23 @@ const Projects = () => {
                                 }
                             >
                                 <div className="flex items-center">
-                                    <h3 className="text-5xl font-bold">
+                                    <h3
+                                        style={{ fontFamily: 'SUNN-Line-Bold' }}
+                                        className="text-3xl md:text-4xl font-bold"
+                                    >
                                         {subdivision?.id}-{subdivision?.title}
                                     </h3>
                                 </div>
+
+                                <div className="md:hidden my-16">
+                                    <img src={subdivision?.mainImage} alt={subdivision?.title} />
+                                </div>
+
                                 <p className="my-4">{subdivision?.abstract}</p>
 
-                                <HashLink to={subdivision?.uri} className="flex items-center">
-                                    <span className="uppercase pb-1 border-b-2">descubrir</span>
-                                    <img src={arrowOpen} alt="" className="ml-4" />
+                                <HashLink to={subdivision?.uri} className="flex items-center justify-end">
+                                    <span className="uppercase text-sm font-semibold pb-1 border-b-2">descubrir</span>
+                                    <img src={arrowOpen} alt="" className="ml-4 h-4 w-4" />
                                 </HashLink>
                             </div>
                         </div>
@@ -136,16 +161,16 @@ const Projects = () => {
                     <hr className="border-0 h-[2px] bg-green my-20" />
 
                     <div className="md:grid md:grid-cols-11 mb-20">
-                        <div className="md:col-start-1 md:col-end-7 mb-16 md:mb-auto">
+                        <div className="hidden md:block md:col-start-1 md:col-end-7 mb-16 md:mb-auto">
                             <img
-                                ref={imageOneRef}
-                                className="md:rotate-[-6deg] hover:rotate-0 transition-all duration-300"
+                                ref={imageFourRef}
+                                className="-6deg hover:rotate-0 transition-all duration-300"
                                 src={projects['relatos-visuales']?.mainImage}
-                                alt="Entre mujeres y el barro"
+                                alt={projects['relatos-visuales']?.title}
                             />
                         </div>
                         <div className="md:col-start-8 md:col-end-12">
-                            <div className="flex">
+                            <div className="flex items-center">
                                 <span
                                     className="grid place-content-center shrink-0 bg-yellow text-green 
                                                 font-secondary text-2xl font-bold rounded-full w-8 h-8 
@@ -153,15 +178,23 @@ const Projects = () => {
                                 >
                                     {projects['relatos-visuales']?.id}
                                 </span>
-                                <h3 className="text-3xl font-primary font-medium lowercase">
+                                <h3 className="text-xl leading-5 md:text-3xl font-primary font-semibold">
                                     {projects['relatos-visuales']?.title}
                                 </h3>
                             </div>
+
+                            <div className="md:hidden my-16">
+                                <img
+                                    src={projects['relatos-visuales']?.mainImage}
+                                    alt={projects['relatos-visuales']?.title}
+                                />
+                            </div>
+
                             <p className="my-4">{projects['relatos-visuales']?.abstract}</p>
 
-                            <Link to={projects['relatos-visuales']?.uri} className="flex items-center">
-                                <span className="uppercase pb-1 border-b-2">descubrir</span>
-                                <img src={arrowOpen} alt="" className="ml-4" />
+                            <Link to={projects['relatos-visuales']?.uri} className="flex items-center justify-end">
+                                <span className="uppercase text-sm font-semibold pb-1 border-b-2">descubrir</span>
+                                <img src={arrowOpen} alt="" className="ml-4 h-4 w-4" />
                             </Link>
                         </div>
                     </div>

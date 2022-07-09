@@ -33,24 +33,28 @@ const Contact = (props) => {
                     </p>
                 </div>
                 <div className="mt-24 md:mt-0">
-                    <ul className="grid grid-cols-2 grid-rows-2 gap-2 text-sm md:text-base">
+                    <ul className="grid grid-cols-2 md:grid-cols-none xl:grid-cols-2 grid-rows-2 gap-2 text-xs md:text-base">
                         <li className="font-medium">
-                            <a href="mailto:valeria@gmail.com" rel="noreferrer" target="_blank">
-                                valeria@gmail.com
+                            <a href="mailto:vaikunthadelatierra@gmail.com" rel="noreferrer" target="_blank">
+                                vaikunthadelatierra@gmail.com
                             </a>
                         </li>
-                        <li className="font-medium uppercase text-right md:text-left">
-                            <a href="https://facebook.com" rel="noreferrer" target="_blank">
+                        <li className="xl:block font-medium uppercase text-right md:text-left">
+                            <a
+                                href="https://www.facebook.com/Vaikuntha-Ceramica-Prehisp%C3%A1nica-302992687051842"
+                                rel="noreferrer"
+                                target="_blank"
+                            >
                                 facebook
                             </a>
                         </li>
                         <li className="font-medium">
-                            <a href="tel:+54911111111" rel="noreferrer" target="_blank">
-                                +549xxxxxxxx
+                            <a href="tel:+5493549438420" rel="noreferrer" target="_blank">
+                                +54 9 (354) 943-8420
                             </a>
                         </li>
                         <li className="font-medium uppercase text-right md:text-left">
-                            <a href="https://instagram.com" rel="noreferrer" target="_blank">
+                            <a href="https://www.instagram.com/vaikuntha__ct/" rel="noreferrer" target="_blank">
                                 instagram
                             </a>
                         </li>

@@ -22,8 +22,8 @@ const AboutSummary = () => {
                     hacer es compartido y popular, me despliego y voy siendo.
                 </p>
             </div>
-            <HashLink to="#more" className="absolute z-20 bottom-24 right-4 md:right-32 cursor-pointer">
-                <img src={arrowIcon} alt="" />
+            <HashLink to="#more" className="absolute z-20 bottom-24 right-4 h-16 md:h-24 md:right-32 cursor-pointer">
+                <img className="h-full" src={arrowIcon} alt="" />
             </HashLink>
         </main>
     );

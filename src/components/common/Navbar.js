@@ -28,7 +28,13 @@ const Navbar = () => {
             )}
             {isAppNameVisible && (
                 <div>
-                    <h1 className={clsx(text, 'text-[3rem] transition-all duration-500 lowercase font-medium')}>
+                    <h1
+                        style={{ fontFamily: 'SUNN-Line-Bold' }}
+                        className={clsx(
+                            text,
+                            'text-3xl leading-10 py-4 transition-all duration-500 lowercase font-medium'
+                        )}
+                    >
                         <Link to="/">Vaikuntha</Link>
                     </h1>
                 </div>

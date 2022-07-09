@@ -19,7 +19,7 @@ const projects = {
         image2: entreMujeres2,
         image3: entreMujeres3,
         instagramToken: process.env.REACT_APP_ENTRE_MUJERES_INSTAGRAM_TOKEN,
-        email: 'entremujeresyelbarro@gmail.com',
+        email: 'vaikunthadelatierra@gmail.com',
         uri: '/proyectos/entre-mujeres-y-el-barro',
         abstract:
             'El proyecto Entre Mujeres y el Barro es un dispositivo para lograr una producción colectiva del saber, donde se desarrolla y se construye el pensamiento crítico para comprender el entorno socio productivo, la mirada sensible y creativa entre las compañeras, empoderandose al mismo tiempo , y por sobre todo, del oficio.',
@@ -39,7 +39,7 @@ const projects = {
                 title: 'De la idea al hecho: se transita',
                 mainImage: deLaIdeaAlHecho1,
                 otherImages: [deLaIdeaAlHecho2, deLaIdeaAlHecho3, deLaIdeaAlHecho4],
-                email: 'propuestasdetalleres@gmail.com',
+                email: 'vaikunthadelatierra@gmail.com',
                 uri: '/proyectos/taller-adentro#top',
                 abstract:
                     'Desde el aprendizaje de las técnicas básicas de la cerámica tradicional preamericana, abordamos la  poética material.',
@@ -55,7 +55,7 @@ const projects = {
                 subtitle: 'Dialogando con el cielo y la tierra',
                 mainImage: entreCodigos1,
                 otherImages: [entreCodigos2],
-                email: 'propuestasdetalleres2@gmail.com',
+                email: 'vaikunthadelatierra@gmail.com',
                 uri: '/proyectos/taller-adentro#entre-codigos',
                 abstract:
                     'Tomando contacto con la carta astral de cada participante, indagaremos con la intuición como principal aliada, en  imágenes arquetípicas, las cuales poseen un carácter arcaico, expresando  contenido del inconsciente colectivo.',
@@ -70,7 +70,7 @@ const projects = {
         id: '3',
         title: 'Relatos visuales',
         mainImage: relatos1,
-        email: 'relatosvisuales@gmail.com',
+        email: 'vaikunthadelatierra@gmail.com',
         uri: '/proyectos/relatos-visuales',
         abstract:
             'Relatos visuales es un proyecto colectivo colaborativo de lenguaje plástico/visual, donde buscamos, a partir de la experiencia del trabajo de campo por medio de entrevistas en un compartir fluido con les protagonistas de esta narrativa, visibilizar, revalorizar y poner en dialogo con el contexto actual, historias que hacen a nuestra cultura regional, que están impresas en las memorias corporales y constituyen también nuestras subjetividades.'

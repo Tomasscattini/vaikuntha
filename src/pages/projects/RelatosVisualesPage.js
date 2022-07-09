@@ -24,25 +24,22 @@ const RelatosVisualesPage = () => {
     }, []);
 
     return (
-        <div className="lg:text-xl lg:leading-10 font-medium pb-48">
+        <div className="text-sm md:text-lg md:leading-8 font-medium pb-48">
             <div className="bg-beige md:min-h-screen">
-                <div className="w-5/6 xl:w-4/6 mx-auto text-green py-20 md:h-[140vh]">
-                    <div onClick={() => navigate('/proyectos')} className="relative cursor-pointer z-50">
-                        <img src={arrowBack} alt="" />
+                <div className="w-5/6 xl:w-4/6 mx-auto text-green py-36 md:h-[140vh]">
+                    <div onClick={() => navigate('/proyectos')} className="relative w-8 cursor-pointer mb-12">
+                        <img src={arrowBack} alt="" className="w-full" />
                     </div>
 
-                    <div className="flex items-center">
+                    <div className="relative flex items-center justify-center">
                         <span
-                            className="grid place-content-center shrink-0 bg-green text-darkGreen 
-                                                font-secondary text-2xl font-bold rounded-full w-8 h-8 
-                                                mt-12 mr-8"
+                            className="grid place-content-center shrink-0 bg-green text-beige 
+                                    font-secondary text-2xl font-bold rounded-full w-8 h-8 
+                                    my-2 mr-4"
                         >
                             3
                         </span>
-                        <h2 className="text-4xl font-bold font-primary">
-                            relatos{' '}
-                            <span className="relative top-12 font-secondary text-6xl md:text-8xl">visuales</span>
-                        </h2>
+                        <h2 className="font-primary text-center text-3xl md:text-5xl font-medium">Relatos Visuales</h2>
                     </div>
 
                     <div className="md:h-screen w-full flex justify-center mt-16 md:mt-36">

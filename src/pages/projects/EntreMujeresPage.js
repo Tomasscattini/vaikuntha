@@ -18,28 +18,28 @@ const EntreMujeresPage = () => {
     useLayoutEffect(() => {
         window.scroll(0, 0);
         setColorScheme('green');
-        setIsAppLogoVisible(false);
+        setIsAppLogoVisible(true);
         setIsAppNameVisible(true);
         // eslint-disable-next-line
     }, []);
     return (
         <>
             <div className="min-h-screen text-green">
-                <div className="w-5/6 xl:w-4/6 mx-auto pt-24">
-                    <div onClick={() => navigate('/proyectos')} className="cursor-pointer mb-12">
-                        <img src={arrowBack} alt="" />
+                <div className="w-5/6 xl:w-4/6 mx-auto pt-36">
+                    <div onClick={() => navigate('/proyectos')} className="relative w-8 cursor-pointer mb-12">
+                        <img src={arrowBack} alt="" className="w-full" />
                     </div>
 
-                    <div className="flex items-center">
+                    <div className="flex items-center justify-center">
                         <span
-                            className="grid place-content-center shrink-0 bg-green text-darkGreen 
+                            className="grid place-content-center shrink-0 bg-green text-beige 
                                                 font-secondary text-2xl font-bold rounded-full w-8 h-8 
                                                 my-2 mr-4"
                         >
                             {currentProject?.id}
                         </span>
 
-                        <h2 className="font-primary text-4xl md:text-6xl font-medium">{currentProject?.title}</h2>
+                        <h2 className="font-primary text-3xl md:text-5xl font-medium">{currentProject?.title}</h2>
                     </div>
 
                     <div className="relative mt-20">
@@ -47,7 +47,7 @@ const EntreMujeresPage = () => {
                             <img className="w-full" src={currentProject?.image1} alt={currentProject?.title} />
                         </div>
 
-                        <div className="top-0  ml-4 mb-16 md:mb-0 text-sm md:text-xl w-5/6">
+                        <div className="top-0  ml-4 mb-16 md:mb-0 text-sm md:text-lg w-5/6">
                             {currentProject?.description?.map((paragraph, index) => (
                                 <p key={index} className="relative z-20 my-4">
                                     {paragraph}
@@ -59,7 +59,7 @@ const EntreMujeresPage = () => {
             </div>
 
             <div className="bg-green h-full pb-48">
-                <div className="w-5/6 xl:w-4/6 mx-auto pt-16 md:pt-52 text-sm md:text-xl text-beige">
+                <div className="w-5/6 xl:w-4/6 mx-auto pt-16 md:pt-52 text-sm md:text-lg text-beige">
                     <p>{currentProject?.abstract}</p>
                 </div>
 

@@ -1,3 +1,8 @@
+### v1.0.0
+
+-   Feature: Add Instagram tokens.
+-   Update: Complete mobile feedback.
+
 ### v0.7.0
 
 -   Feature: Add instagram feed to each project.

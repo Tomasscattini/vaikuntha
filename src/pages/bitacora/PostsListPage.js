@@ -1,10 +1,15 @@
 import React, { useLayoutEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useContextInfo } from 'hooks/ContextProvider';
 import PostCard from './PostCard';
+
+import arrowBack from 'assets/images/arrow-back-yellow.svg';
 
 const PostsListPage = () => {
     const { getPosts, isLoadingPosts, posts, setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } =
         useContextInfo();
+
+    const navigate = useNavigate();
 
     useLayoutEffect(() => {
         getPosts();
@@ -12,7 +17,7 @@ const PostsListPage = () => {
 
     useLayoutEffect(() => {
         setColorScheme('yellow');
-        setIsAppLogoVisible(false);
+        setIsAppLogoVisible(true);
         setIsAppNameVisible(true);
         // eslint-disable-next-line
     }, []);
@@ -20,16 +25,22 @@ const PostsListPage = () => {
     return (
         <div className="bg-green min-h-screen">
             <div className="w-5/6 xl:w-4/6 mx-auto">
-                <div className="py-36 md:py-20 md:min-h-[40vh]">
+                <div className="pt-36 pb-16 md:min-h-[40vh]">
+                    <div onClick={() => navigate(-1)} className="relative w-8 cursor-pointer mb-6">
+                        <img src={arrowBack} alt="" className="w-full" />
+                    </div>
                     <h2 className="text-yellow text-2xl md:text-4xl font-bold font-primary">
                         bitácora{' '}
-                        <span className="relative top-12 font-secondary text-4xl md:text-8xl">
+                        <span
+                            style={{ fontFamily: 'SUNN-Line-Bold' }}
+                            className="relative top-8 md:top-12 left-[-1rem] md:left-0 font-secondary text-4xl md:text-8xl"
+                        >
                             relatos en movimiento
                         </span>
                     </h2>
 
-                    {/* <div className="text-beige text-lg">
-                        <p className="mt-40">
+                    <div className="text-beige text-sm md:text-lg">
+                        <p className="mt-20">
                             Relatos Visuales es un proyecto donde eso que no tuvo lugar sale y se manifiesta con fuerza
                             animal.
                         </p>
@@ -37,9 +48,9 @@ const PostsListPage = () => {
                             Deseamos que conecten con estos relatos/historias al igual que nosotras y llevarlos a
                             recorrer vidas y territorios.
                         </p>
-                    </div> */}
+                    </div>
                 </div>
-                <div className="pb-40">
+                <div className="pb-20">
                     {isLoadingPosts && <div>Cargando...</div>}
 
                     {posts && (

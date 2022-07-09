@@ -3,7 +3,7 @@ module.exports = {
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
         colors: {
-            beige: '#C1BAB2',
+            beige: '#E0D9D1',
             darkGreen: '#232616',
             green: '#3E5041',
             terra: '#591310',
@@ -44,15 +44,17 @@ module.exports = {
                 '100%': { top: '1.2rem', right: '-10rem' }
             },
             'translate-word-2': {
-                '99%': { 'font-family': 'Poppins', 'font-size': '3.5rem' },
-                '100%': { top: '1.2rem', right: '-28rem', 'font-family': 'SUNN-Line-Regular', 'font-size': '10rem' }
+                '0%': { 'font-family': 'Poppins', 'font-size': '3.5rem', top: '4rem', right: 0 },
+                '99%': { 'font-family': 'Poppins', 'font-size': '3.5rem', top: '4rem' },
+                '100%': { top: '1.2rem', right: '-28rem', 'font-family': 'SUNN-Line-Bold', 'font-size': '10rem' }
             },
             'translate-word-1-small': {
                 '100%': { top: '1.2rem', right: '-4rem' }
             },
             'translate-word-2-small': {
+                '0%': { top: '3rem', right: 0, 'font-family': 'Poppins', 'font-size': '2rem' },
                 '99%': { 'font-family': 'Poppins', 'font-size': '2rem' },
-                '100%': { top: '3rem', right: '-15rem', 'font-family': 'SUNN-Line-Regular', 'font-size': '3rem' }
+                '100%': { top: '3rem', right: '-12rem', 'font-family': 'SUNN-Line-Bold', 'font-size': '5rem' }
             }
         },
         animation: {

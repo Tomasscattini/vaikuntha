@@ -7,7 +7,6 @@ import './ig-feed.css';
 import projects from 'data/projects';
 
 import arrowBack from 'assets/images/arrow-back-yellow.svg';
-import arrowOpen from 'assets/images/arrow-open-yellow.svg';
 import instagramLogo from 'assets/images/instagram-yellow.svg';
 
 const EntreMujeresPage = () => {
@@ -19,31 +18,31 @@ const EntreMujeresPage = () => {
     useLayoutEffect(() => {
         window.scroll(0, 0);
         setColorScheme('yellow');
-        setIsAppLogoVisible(false);
+        setIsAppLogoVisible(true);
         setIsAppNameVisible(true);
         // eslint-disable-next-line
     }, []);
     return (
         <div className="min-h-screen bg-green text-beige pb-48">
-            <div className="w-5/6 xl:w-4/6 mx-auto pt-24 pb-16">
-                <div onClick={() => navigate('/proyectos')} className="cursor-pointer mb-12">
-                    <img src={arrowBack} alt="" />
+            <div className="w-5/6 xl:w-4/6 mx-auto pt-36 pb-16">
+                <div onClick={() => navigate('/proyectos')} className="relative w-8 cursor-pointer mb-12">
+                    <img src={arrowBack} alt="" className="w-full" />
                 </div>
 
-                <div className="relative flex items-center">
+                <div className="flex items-center justify-center">
                     <span
-                        className="absolute left-0 top- 0 grid place-content-center shrink-0 bg-yellow text-green 
+                        className="grid place-content-center shrink-0 bg-yellow text-green 
                                     font-secondary text-2xl font-bold rounded-full w-8 h-8 
                                     my-2 mr-4"
                     >
                         {currentProject?.id}
                     </span>
 
-                    <h2 className="font-primary text-center text-yellow w-full text-4xl md:text-6xl font-medium">
+                    <h2 className="font-primary text-3xl md:text-5xl font-medium text-yellow">
                         {currentProject?.title}
                     </h2>
                 </div>
-                <p className="text-sm md:text-xl my-8 md:my-20">{currentProject?.subtitle}</p>
+                <p className="text-sm md:text-lg my-8 md:my-12">{currentProject?.subtitle}</p>
 
                 {currentProject?.subdivisions?.map((subdivision, index, array) => (
                     <div id={subdivision.key} className="">
@@ -83,7 +82,6 @@ const EntreMujeresPage = () => {
                             >
                                 pedir mas info
                             </a>
-                            <img className="ml-4" src={arrowOpen} alt="" />
                         </div>
                         {index !== array.length - 1 && <hr className="border-0 w-full h-[2px] bg-yellow mt-40 mb-20" />}
                     </div>

@@ -102,8 +102,11 @@ const AboutMore = () => {
                         </div>
                     </div>
                 </div>
-                <HashLink to="#top" className="absolute z-20 bottom-16 right-4 md:right-32 cursor-pointer rotate-180">
-                    <img src={arrowIcon} alt="" />
+                <HashLink
+                    to="#top"
+                    className="absolute z-20 h-16 md:h-24 bottom-16 right-4 md:right-32 cursor-pointer rotate-180"
+                >
+                    <img className="h-full" src={arrowIcon} alt="" />
                 </HashLink>
             </div>
         </>

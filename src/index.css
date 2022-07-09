@@ -12,6 +12,8 @@
     }
     html {
         scroll-padding-top: 3rem;
+        overflow-x: hidden;
+        width: 100vw;
     }
     body {
         @apply font-primary bg-beige;
