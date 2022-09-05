@@ -1,3 +1,7 @@
+### v1.1.0
+
+-   Feature: Update fonts and add transitions.
+
 ### v1.0.0
 
 -   Feature: Add Instagram tokens.

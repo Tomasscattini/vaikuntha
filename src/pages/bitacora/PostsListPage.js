@@ -31,23 +31,20 @@ const PostsListPage = () => {
                     </div>
                     <h2 className="text-yellow text-2xl md:text-4xl font-bold font-primary">
                         bitácora{' '}
-                        <span
-                            style={{ fontFamily: 'SUNN-Line-Bold' }}
-                            className="relative top-8 md:top-12 left-[-1rem] md:left-0 font-secondary text-4xl md:text-8xl"
-                        >
+                        <span className="relative top-8 md:top-12 left-[-1rem] md:left-0 font-secondary text-2xl md:text-6xl">
                             relatos en movimiento
                         </span>
                     </h2>
 
-                    <div className="text-beige text-sm md:text-lg">
-                        <p className="mt-20">
+                    <div className="text-beige text-sm md:text-lg mt-20">
+                        {/* <p className="">
                             Relatos Visuales es un proyecto donde eso que no tuvo lugar sale y se manifiesta con fuerza
                             animal.
                         </p>
                         <p className="mt-2">
                             Deseamos que conecten con estos relatos/historias al igual que nosotras y llevarlos a
                             recorrer vidas y territorios.
-                        </p>
+                        </p> */}
                     </div>
                 </div>
                 <div className="pb-20">

@@ -12,7 +12,7 @@ module.exports = {
         },
         fontFamily: {
             primary: 'Poppins',
-            secondary: 'SUNN-Line-Regular'
+            secondary: 'Amatic SC'
         },
         keyframes: {
             'image-grow': {
@@ -21,14 +21,14 @@ module.exports = {
             },
             'beating-logo': {
                 '0%': { transform: 'scale(1)' },
-                '10%': { transform: 'scale(0.9)' },
-                '25%': { transform: 'scale(1.5)' },
-                '27%': { transform: 'scale(1.45)' },
-                '40%': { transform: 'scale(1.45)' },
-                '45%': { transform: 'scale(1.42)' },
+                '10%': { transform: 'scale(0.7)' },
+                '25%': { transform: 'scale(1.9)' },
+                // '27%': { transform: 'scale(1.65)' },
+                '40%': { transform: 'scale(1.65)' },
+                '45%': { transform: 'scale(1.52)' },
                 '60%': { transform: 'scale(2.5)' },
                 '62%': { transform: 'scale(2.45)' },
-                '80%': { transform: 'scale(2.45)' },
+                '80%': { transform: 'scale(2.20)' },
                 '85%': { transform: 'scale(2.40)' },
                 '100%': { transform: 'scale(240)' }
             },
@@ -44,17 +44,15 @@ module.exports = {
                 '100%': { top: '1.2rem', right: '-10rem' }
             },
             'translate-word-2': {
-                '0%': { 'font-family': 'Poppins', 'font-size': '3.5rem', top: '4rem', right: 0 },
-                '99%': { 'font-family': 'Poppins', 'font-size': '3.5rem', top: '4rem' },
-                '100%': { top: '1.2rem', right: '-28rem', 'font-family': 'SUNN-Line-Bold', 'font-size': '10rem' }
+                '0%': { top: '1.2rem', right: 0 },
+                '100%': { top: '1.2rem', right: '-28rem' }
             },
             'translate-word-1-small': {
                 '100%': { top: '1.2rem', right: '-4rem' }
             },
             'translate-word-2-small': {
-                '0%': { top: '3rem', right: 0, 'font-family': 'Poppins', 'font-size': '2rem' },
-                '99%': { 'font-family': 'Poppins', 'font-size': '2rem' },
-                '100%': { top: '3rem', right: '-12rem', 'font-family': 'SUNN-Line-Bold', 'font-size': '5rem' }
+                '0%': { top: '3rem', right: 0 },
+                '100%': { top: '3rem', right: '-12rem' }
             }
         },
         animation: {

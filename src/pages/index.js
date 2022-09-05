@@ -1,6 +1,7 @@
 export { default as AboutPage } from 'pages/about/About';
 export { default as ContactPage } from 'pages/contact/Contact';
 export { default as EntreMujeresPage } from 'pages/projects/EntreMujeresPage';
+export { default as ErrorPage } from 'pages/common/ErrorPage';
 export { default as LandingPage } from 'pages/landing-page/LandingPage';
 export { default as PostDetailsPage } from 'pages/bitacora/PostDetailsPage';
 export { default as PostsListPage } from 'pages/bitacora/PostsListPage';

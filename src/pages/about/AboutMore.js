@@ -17,12 +17,12 @@ const AboutMore = () => {
 
             <div
                 id="more"
-                className="snap-start relative md:h-[200vh] w-full my-24 md:my-auto text-green text-sm md:text-[1.4rem] md:leading-8 font-medium"
+                className="snap-start relative md:h-[180vh] w-full my-4 md:my-auto text-green text-sm md:text-[1.4rem] md:leading-8 font-medium"
             >
                 <div className="hidden absolute md:flex items-center justify-center z-0 bottom-16 left-16 max-w-1/2 h-2/3 overflow-hidden">
                     <img className="w-full" src={about5} alt="" />
                 </div>
-                <div className="relative z-10 w-4/6 mx-auto grow-0 pt-2">
+                <div className="relative z-10 w-4/6 mx-auto grow-0 md:pt-2 md:mt-16">
                     <p className="">
                         La curiosidad me llevó a la carrera de Artes Plásticas en La Plata UNLP, se abrían otros mundos
                         ante mis ojos. La experimentación, lo diverso y los viajes fueron desvistiéndome de ideas y
@@ -32,7 +32,7 @@ const AboutMore = () => {
                         voy siendo.
                     </p>
                 </div>
-                <div className="relative mt-[10%] mx-auto md:mr-48 z-10 w-4/6 md:w-[50%] md:float-right">
+                <div className="relative md:mt-16 mx-auto md:mr-48 z-10 w-4/6 md:w-[50%] md:float-right">
                     <p className="my-8">
                         Paralelamente lo Social comenzaba a inquietarme, observar el entorno, buscar comprender las
                         complejas tramas que nos tejen. Latir lo comunitario, habitar los territorios. Fue así que
@@ -92,7 +92,7 @@ const AboutMore = () => {
                             compartida. Gestando ideas, generando espacios, creando otros posibles.
                         </p>
 
-                        <div className="flex items-center w-full overflow-hidden my-32">
+                        <div className="flex items-center w-full overflow-hidden my-8 md:my-32">
                             <div className="w-1/2 mr-32">
                                 <img src={drawing1} alt="" />
                             </div>

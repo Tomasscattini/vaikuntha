@@ -103,10 +103,15 @@ const RelatosVisualesPage = () => {
                 </div>
             </div>
 
-            <div className="flex items-center justify-center w-full mt-16 md:mt-32 mb-16">
+            <a
+                href="https://www.instagram.com/relatos__visuales/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center w-full mt-16 md:mt-32 mb-16"
+            >
                 <img className="mr-4 h-8" src={instagramLogo} alt="" />
-                <span className="text-green font-medium text-xl">seguinos en instagram</span>
-            </div>
+                <span className="text-green font-medium text-xl">Seguinos en instagram</span>
+            </a>
 
             <div className="w-5/6 xl:w-4/6 mx-auto min-h-screen">
                 <InstagramFeed token={process.env.REACT_APP_RELATOS_VISUALES_INSTAGRAM_TOKEN} counter="9" />

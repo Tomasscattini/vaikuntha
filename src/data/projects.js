@@ -18,6 +18,7 @@ const projects = {
         image1: entreMujeres1,
         image2: entreMujeres2,
         image3: entreMujeres3,
+        instagramLink: 'https://www.instagram.com/entremujeresyelbarro/',
         instagramToken: process.env.REACT_APP_ENTRE_MUJERES_INSTAGRAM_TOKEN,
         email: 'vaikunthadelatierra@gmail.com',
         uri: '/proyectos/entre-mujeres-y-el-barro',
@@ -30,7 +31,8 @@ const projects = {
     'taller-adentro': {
         id: '2',
         title: 'Taller Adentro',
-        subtitle: 'Conoce nuestras propuestas',
+        subtitle: 'Conocé nuestras propuestas',
+        instagramLink: 'https://www.instagram.com/vaikuntha__ct/',
         instagramToken: process.env.REACT_APP_TALLER_ADENTRO_INSTAGRAM_TOKEN,
         subdivisions: [
             {
@@ -51,7 +53,7 @@ const projects = {
             {
                 id: '2',
                 key: 'entre-codigos',
-                title: 'Entre códigos, símbolos y poéticas materiales',
+                title: 'Entre códigos, símbolos y poéticas materiales. Dialogando con el cielo y la tierra',
                 subtitle: 'Dialogando con el cielo y la tierra',
                 mainImage: entreCodigos1,
                 otherImages: [entreCodigos2],

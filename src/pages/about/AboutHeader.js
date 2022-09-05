@@ -6,15 +6,15 @@ import about3 from 'assets/images/about-3.jpg';
 
 const AboutHeader = () => {
     return (
-        <header className="snap-start h-screen flex flex-col justify-between pt-28">
+        <header className="snap-start md:h-screen flex flex-col justify-between pt-28">
             <div className="relative z-20 w-5/6 xl:w-4/6 sm:w-3/4 mx-auto transition-all duration-300">
-                <h2 className="inline-block w-24 md:w-40 relative mt-[20vh] mb-8 font-primary text-yellow text-4xl md:text-7xl font-medium">
+                <h2 className="inline-block w-24 md:w-40 relative  mt-16 md:mt-[20vh] mb-8 font-primary text-yellow text-4xl md:text-7xl font-medium">
                     <span className="absolute right-0 top-0">quien</span>&nbsp;
                     <span className="absolute right-5 top-14 animate-translate-word-1-small md:animate-translate-word-1">
                         voy
                     </span>
                     &nbsp;
-                    <span className="absolute font-bold animate-translate-word-2-small md:animate-translate-word-2">
+                    <span className="absolute text-[3.5rem] md:text-[8rem] font-secondary font-bold animate-translate-word-2-small md:animate-translate-word-2">
                         siendo
                     </span>
                 </h2>

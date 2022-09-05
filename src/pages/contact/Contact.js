@@ -33,8 +33,8 @@ const Contact = (props) => {
                     </p>
                 </div>
                 <div className="mt-24 md:mt-0">
-                    <ul className="grid grid-cols-2 md:grid-cols-none xl:grid-cols-2 grid-rows-2 gap-2 text-xs md:text-base">
-                        <li className="font-medium">
+                    <ul className="grid grid-cols-2 md:grid-cols-none xl:grid-cols-3 grid-rows-2 gap-2 text-xs md:text-base">
+                        <li className="font-medium xl:col-start-1 xl:col-end-3">
                             <a href="mailto:vaikunthadelatierra@gmail.com" rel="noreferrer" target="_blank">
                                 vaikunthadelatierra@gmail.com
                             </a>
@@ -48,7 +48,7 @@ const Contact = (props) => {
                                 facebook
                             </a>
                         </li>
-                        <li className="font-medium">
+                        <li className="font-medium xl:col-start-1 xl:col-end-3">
                             <a href="tel:+5493549438420" rel="noreferrer" target="_blank">
                                 +54 9 (354) 943-8420
                             </a>

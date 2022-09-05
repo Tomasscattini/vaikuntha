@@ -49,7 +49,7 @@ const EntreMujeresPage = () => {
 
                         <div className="top-0  ml-4 mb-16 md:mb-0 text-sm md:text-lg w-5/6">
                             {currentProject?.description?.map((paragraph, index) => (
-                                <p key={index} className="relative z-20 my-4">
+                                <p key={`${paragraph}${index}`} className="relative z-20 my-4">
                                     {paragraph}
                                 </p>
                             ))}
@@ -75,10 +75,15 @@ const EntreMujeresPage = () => {
                     </div>
                 </div>
 
-                <div className="flex items-center justify-center w-full mt-16 md:mt-32 mb-16">
+                <a
+                    href={currentProject?.instagramLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center justify-center w-full mt-16 md:mt-32 mb-16"
+                >
                     <img className="mr-4 h-8" src={instagramLogo} alt="" />
-                    <span className="text-yellow font-medium text-xl">seguinos en instagram</span>
-                </div>
+                    <span className="text-yellow font-medium text-xl">Seguinos en instagram</span>
+                </a>
 
                 <div className="w-5/6 xl:w-4/6 mx-auto min-h-screen">
                     <InstagramFeed token={currentProject?.instagramToken} counter="9" />

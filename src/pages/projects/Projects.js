@@ -46,7 +46,7 @@ const Projects = () => {
                     <h2 className="text-yellow font-primary text-3xl md:text-5xl font-bold mt-24">proyectos</h2>
                     <h3 className="text-green text-2xl md:text-4xl font-bold font-primary ml-20 md:ml-40">
                         despliegues <br />
-                        <span className="relative leading-5 md:top-2 ml-28 md:ml-48 font-secondary text-6xl md:text-8xl md:leading-3">
+                        <span className="relative leading-5 md:top-2 ml-28 md:ml-48 font-secondary text-4xl md:text-6xl md:leading-3">
                             creativos
                         </span>
                     </h3>
@@ -63,11 +63,11 @@ const Projects = () => {
                             />
                         </div>
                         <div className="md:col-start-8 md:col-end-12">
-                            <div className="flex items-center">
+                            <div className="flex items-center md:items-start">
                                 <span
                                     className="grid place-content-center shrink-0 bg-yellow text-green 
                                                 font-secondary text-2xl font-bold rounded-full w-8 h-8 
-                                                my-2 mr-2"
+                                                md:my-1 mr-2"
                                 >
                                     {projects['entre-mujeres-y-el-barro']?.id}
                                 </span>
@@ -110,7 +110,7 @@ const Projects = () => {
                         </h3>
                     </div>
                     {projects['taller-adentro']?.subdivisions?.map((subdivision, index) => (
-                        <div key={subdivision?.email} className="md:grid md:grid-cols-11 mb-16 md:mb-48">
+                        <div key={subdivision?.uri} className="md:grid md:grid-cols-11 mb-16 md:mb-48">
                             <div
                                 className={clsx(
                                     'hidden md:block mb-16 md:mb-auto',
@@ -136,10 +136,7 @@ const Projects = () => {
                                 }
                             >
                                 <div className="flex items-center">
-                                    <h3
-                                        style={{ fontFamily: 'SUNN-Line-Bold' }}
-                                        className="text-3xl md:text-4xl font-bold"
-                                    >
+                                    <h3 className="text-3xl md:text-4xl font-bold">
                                         {subdivision?.id}-{subdivision?.title}
                                     </h3>
                                 </div>
@@ -170,11 +167,11 @@ const Projects = () => {
                             />
                         </div>
                         <div className="md:col-start-8 md:col-end-12">
-                            <div className="flex items-center">
+                            <div className="flex items-center md:items-start">
                                 <span
                                     className="grid place-content-center shrink-0 bg-yellow text-green 
                                                 font-secondary text-2xl font-bold rounded-full w-8 h-8 
-                                                my-2 mr-2"
+                                                md:my-1 mr-2"
                                 >
                                     {projects['relatos-visuales']?.id}
                                 </span>

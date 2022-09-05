@@ -42,11 +42,11 @@ const EntreMujeresPage = () => {
                         {currentProject?.title}
                     </h2>
                 </div>
-                <p className="text-sm md:text-lg my-8 md:my-12">{currentProject?.subtitle}</p>
+                <p className="text-sm md:text-xl my-8 md:my-12">{currentProject?.subtitle}</p>
 
                 {currentProject?.subdivisions?.map((subdivision, index, array) => (
                     <div id={subdivision.key} className="">
-                        <h3 className="text-yellow text-center w-full text-4xl md:text-5xl font-medium mb-20">
+                        <h3 className="text-yellow w-full text-4xl md:text-5xl font-medium mb-20">
                             {subdivision?.id}-{subdivision?.title}
                         </h3>
                         <p className="text-sm md:text-lg">{subdivision?.description?.[0]}</p>
@@ -75,7 +75,7 @@ const EntreMujeresPage = () => {
                         <p className="text-sm md:text-lg">{subdivision?.description?.[1]}</p>
                         <div className="flex items-center text-yellow uppercase float-right mt-16">
                             <a
-                                className="border-b-2"
+                                className="border-b-2 text-xs md:text-base"
                                 target="_blank"
                                 rel="noreferrer"
                                 href={`mailto:${subdivision?.email}`}
@@ -88,10 +88,15 @@ const EntreMujeresPage = () => {
                 ))}
             </div>
 
-            <div className="flex items-center justify-center w-full mt-16 md:mt-32 mb-16">
+            <a
+                href={currentProject?.instagramLink}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center w-full mt-16 md:mt-32 mb-16"
+            >
                 <img className="mr-4 h-8" src={instagramLogo} alt="" />
-                <span className="text-yellow font-medium text-xl">seguinos en instagram</span>
-            </div>
+                <span className="text-yellow font-medium text-xl">Seguinos en instagram</span>
+            </a>
 
             <div className="w-5/6 xl:w-4/6 mx-auto min-h-screen">
                 <InstagramFeed token={currentProject?.instagramToken} counter="9" />

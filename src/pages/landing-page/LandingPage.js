@@ -1,6 +1,6 @@
 import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { useContextInfo } from 'hooks/ContextProvider';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import InitialAnimation from './InitialAnimation';
 import { Logo } from 'components';
@@ -18,12 +18,13 @@ const LandingPage = (props) => {
     }, []);
 
     useEffect(() => {
-        if (bodyRef.current)
-            bodyRef.current.addEventListener('scroll', (ev) => {
+        const $currentBodyRef = bodyRef.current;
+        if ($currentBodyRef)
+            $currentBodyRef.addEventListener('scroll', (ev) => {
                 navigate('/acerca');
             });
-        return () => bodyRef.current?.removeEventListener('scroll', () => {});
-    }, []);
+        return () => $currentBodyRef?.removeEventListener('scroll', () => {});
+    }, [navigate]);
 
     return (
         <div
@@ -36,7 +37,7 @@ const LandingPage = (props) => {
                         after:z-[-10]"
         >
             {!hideInitialAnimation && <InitialAnimation />}
-            <div className="flex justify-center items-end h-[101vh] py-16 ">
+            <div className="flex justify-center items-center md:items-end h-[101vh] py-16 ">
                 <div className="text-center">
                     <Logo className="w-40 h-40 md:w-60 md:h-60 mx-auto mb-[5vh]" color="yellow" />
                     <h1 className="text-7xl md:text-9xl font-bold text-yellow uppercase">Vaikuntha</h1>
