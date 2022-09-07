@@ -12,7 +12,7 @@ import relatos1 from 'assets/images/relatos3.jpg';
 
 const projects = {
     'entre-mujeres-y-el-barro': {
-        id: '1',
+        id: '2',
         title: 'Entre mujeres y el barro',
         mainImage: entreMujeresMain,
         image1: entreMujeres1,
@@ -25,11 +25,15 @@ const projects = {
         abstract:
             'El proyecto Entre Mujeres y el Barro es un dispositivo para lograr una producción colectiva del saber, donde se desarrolla y se construye el pensamiento crítico para comprender el entorno socio productivo, la mirada sensible y creativa entre las compañeras, empoderandose al mismo tiempo , y por sobre todo, del oficio.',
         description: [
-            'ENTRE MUJERES Y EL BARRO nace en el 2019 (en ese entonces aún sin su identidad)  en la Localidad de Profundidad, Mnes. donde presento un proyecto a través de la Biblioteca Popualar El Urunday, con el objetivo de generar el aprehendizaje de un oficio con legado, un modo de pensar/ sentir/ hacer situado, para la autonomía integral de las mujeres a través del oficio cerámico de raiz preamericana, desde un abordaje psicosocial con perspectiva de género, en pos de construir una economía feminista y comunitaria, que  provoque la emancipación económica en las mujeres e incrementen así los ingresos de las familias.'
+            'En el año 2019, a través de la Biblioteca Popular el Urunday, se presentó un proyecto  para trabajar el oficio cerámico de raíz preamericana con mujeres de la comunidad rural de la Localidad de Profundidad, Misiones.',
+            'Desde entonces y a partir de un abordaje psicosocial he guiado y acompañado lo que llamo un dispositivo para la producción colectiva del saber. La intención fue promover el aprehendizaje del oficio y su legado; un modo de pensar / sentir / hacer situados, en pos de  alentar la autonomía integral de las mujeres a través del oficio y contribuir a construir una economía feminista y comunitaria.',
+            'Andando este camino, y a través de la facilitación de dinámicas participativas, el grupo encuentra su identidad nombrándose: "Entre Mujeres y el Barro"',
+            'Durante estos 4 años acompañé desde la guía en el aprendizaje del oficio y realice la coordinación y gestión de los encuentros.',
+            'A partir del 2023 el grupo comenzará una nueva etapa de manera autónoma.'
         ]
     },
     'taller-adentro': {
-        id: '2',
+        id: '3',
         title: 'Taller Adentro',
         subtitle: 'Conocé nuestras propuestas',
         instagramLink: 'https://www.instagram.com/vaikuntha__ct/',
@@ -69,7 +73,7 @@ const projects = {
         ]
     },
     'relatos-visuales': {
-        id: '3',
+        id: '1',
         title: 'Relatos visuales',
         mainImage: relatos1,
         email: 'vaikunthadelatierra@gmail.com',

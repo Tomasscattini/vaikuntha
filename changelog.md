@@ -1,3 +1,7 @@
+### v1.2.0
+
+-   Feature: scroll animations on about and taller adentro.
+
 ### v1.1.0
 
 -   Feature: Update fonts and add transitions.

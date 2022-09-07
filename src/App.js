@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Route, Routes } from 'react-router-dom';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import {
     AboutPage,
@@ -16,6 +18,7 @@ import {
 
 const App = () => {
     const location = useLocation();
+    gsap.registerPlugin(ScrollTrigger);
 
     const [displayLocation, setDisplayLocation] = useState(location);
     const [transitionStage, setTransistionStage] = useState('fadeIn');
@@ -35,16 +38,16 @@ const App = () => {
             }}
         >
             <Routes location={displayLocation}>
-                <Route path="/" exact element={<LandingPage />} />
-                <Route path="/acerca" exact element={<AboutPage />} />
-                <Route path="/contacto" exact element={<ContactPage />} />
-                <Route path="/proyectos" exact element={<ProjectsPage />} />
-                <Route path="/proyectos/entre-mujeres-y-el-barro" exact element={<EntreMujeresPage />} />
-                <Route path="/proyectos/taller-adentro" exact element={<TallerAdentroPage />} />
-                <Route path="/proyectos/relatos-visuales" exact element={<RelatosVisualesPage />} />
-                <Route path="/bitacora" exact element={<PostsListPage />} />
-                <Route path="/bitacora/:id" element={<PostDetailsPage />} />
-                <Route path="*" element={<ErrorPage />} />
+                <Route path="/" exact element={<LandingPage gsap={gsap} />} />
+                <Route path="/acerca" exact element={<AboutPage gsap={gsap} />} />
+                <Route path="/contacto" exact element={<ContactPage gsap={gsap} />} />
+                <Route path="/proyectos" exact element={<ProjectsPage gsap={gsap} />} />
+                <Route path="/proyectos/entre-mujeres-y-el-barro" exact element={<EntreMujeresPage gsap={gsap} />} />
+                <Route path="/proyectos/taller-adentro" exact element={<TallerAdentroPage gsap={gsap} />} />
+                <Route path="/proyectos/relatos-visuales" exact element={<RelatosVisualesPage gsap={gsap} />} />
+                <Route path="/bitacora" exact element={<PostsListPage gsap={gsap} />} />
+                <Route path="/bitacora/:id" element={<PostDetailsPage gsap={gsap} />} />
+                <Route path="*" element={<ErrorPage gsap={gsap} />} />
             </Routes>
         </div>
     );

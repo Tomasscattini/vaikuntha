@@ -1,15 +1,10 @@
 import React, { useLayoutEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useContextInfo } from 'hooks/ContextProvider';
 import PostCard from './PostCard';
-
-import arrowBack from 'assets/images/arrow-back-yellow.svg';
 
 const PostsListPage = () => {
     const { getPosts, isLoadingPosts, posts, setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } =
         useContextInfo();
-
-    const navigate = useNavigate();
 
     useLayoutEffect(() => {
         getPosts();
@@ -26,11 +21,8 @@ const PostsListPage = () => {
         <div className="bg-green min-h-screen">
             <div className="w-5/6 xl:w-4/6 mx-auto">
                 <div className="pt-36 pb-16 md:min-h-[40vh]">
-                    <div onClick={() => navigate(-1)} className="relative w-8 cursor-pointer mb-6">
-                        <img src={arrowBack} alt="" className="w-full" />
-                    </div>
                     <h2 className="text-yellow text-2xl md:text-4xl font-bold font-primary">
-                        bitácora{' '}
+                        Bitácora{' '}
                         <span className="relative top-8 md:top-12 left-[-1rem] md:left-0 font-secondary text-2xl md:text-6xl">
                             relatos en movimiento
                         </span>

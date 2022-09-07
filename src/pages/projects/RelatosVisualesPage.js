@@ -37,7 +37,7 @@ const RelatosVisualesPage = () => {
                                     font-secondary text-2xl font-bold rounded-full w-8 h-8 
                                     my-2 mr-4"
                         >
-                            3
+                            1
                         </span>
                         <h2 className="font-primary text-center text-3xl md:text-5xl font-medium">Relatos Visuales</h2>
                     </div>

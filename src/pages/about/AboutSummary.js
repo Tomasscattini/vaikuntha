@@ -1,10 +1,29 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 
 import arrowIcon from 'assets/images/arrow-down.svg';
 import manyDrawings from 'assets/images/many-drawings.svg';
 
-const AboutSummary = () => {
+const AboutSummary = ({ gsap }) => {
+    useLayoutEffect(() => {
+        gsap.fromTo(
+            '.about-p1',
+            {
+                opacity: 0
+            },
+            {
+                opacity: 1,
+                duration: 0.5,
+                delay: 0.3,
+                scrollTrigger: {
+                    trigger: '.about-p1',
+                    start: 'top bottom-=50',
+                    toggleActions: 'restart none none reverse'
+                }
+            }
+        );
+    }, [gsap]);
+
     return (
         <main
             id="summary"
@@ -14,12 +33,15 @@ const AboutSummary = () => {
                 <div className="absolute w-[60vw] md:w-[30vw] right-[-20vw] top-[-11rem] md:top-[-8rem]">
                     <img src={manyDrawings} alt="" />
                 </div>
-                <p className="relative z-20 text-beige text-sm md:text-[1.4rem] md:leading-8">
-                    Partiendo siempre de la pregunta como aliada, indago a través de la cerámica tradicional y otras
-                    poéticas materiales / visuales los bastos modos de ser y estar en esta forma de existencia. La
-                    Tierra y los grandes misterios siempre guías. Desde una construcción colectiva, acentuando en la
-                    práctica taller adentro, generador de un conocimiento situado, y los espacios públicos, donde el
-                    hacer es compartido y popular, me despliego y voy siendo.
+                <p className="about-p1 relative z-20 text-beige text-sm md:text-[1.4rem] md:leading-8">
+                    Partiendo siempre de la pregunta como aliada, y un particular interés en la simpleza de lo cotidiano
+                    y subjetivo, donde se deja entrever la trama de la existencia, indago a través de la cerámica
+                    tradicional y otras poéticas materiales/visuales. El cuerpo como herramienta sensible y discursiva,
+                    es otro gran interés y recurso expresivo en mi camino como hacedora. La Tierra y los grandes
+                    misterios siempre guías.
+                    <br />
+                    Buscando y ejercitando continuamente la co-creación, desde una vivencia genuina y sensible.
+                    Traduciendo lo que me atraviesa en lenguaje simbólico.
                 </p>
             </div>
             <HashLink to="#more" className="absolute z-20 bottom-24 right-4 h-16 md:h-24 md:right-32 cursor-pointer">

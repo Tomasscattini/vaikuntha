@@ -48,11 +48,8 @@ const EntreMujeresPage = () => {
                         </div>
 
                         <div className="top-0  ml-4 mb-16 md:mb-0 text-sm md:text-lg w-5/6">
-                            {currentProject?.description?.map((paragraph, index) => (
-                                <p key={`${paragraph}${index}`} className="relative z-20 my-4">
-                                    {paragraph}
-                                </p>
-                            ))}
+                            <p className="relative z-20 my-4">{currentProject?.description?.[0]}</p>
+                            <p className="relative z-20 my-4">{currentProject?.description?.[1]}</p>
                         </div>
                     </div>
                 </div>
@@ -60,7 +57,9 @@ const EntreMujeresPage = () => {
 
             <div className="bg-green h-full pb-48">
                 <div className="w-5/6 xl:w-4/6 mx-auto pt-16 md:pt-52 text-sm md:text-lg text-beige">
-                    <p>{currentProject?.abstract}</p>
+                    <p>{currentProject?.description?.[2]}</p>
+                    <p>{currentProject?.description?.[3]}</p>
+                    <p>{currentProject?.description?.[4]}</p>
                 </div>
 
                 <div className="relative flex h-[40vh] md:h-[30vw] w-full md:w-[120vw] md:left-[-10vw] mt-16 md:mt-32">

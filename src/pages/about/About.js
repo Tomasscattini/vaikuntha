@@ -5,7 +5,7 @@ import AboutHeader from './AboutHeader';
 import AboutSummary from './AboutSummary';
 import AboutMore from './AboutMore';
 
-const About = () => {
+const About = ({ gsap }) => {
     const { setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } = useContextInfo();
     const [isAnimationRunning, setIsAnimationRunning] = useState(true);
 
@@ -37,9 +37,9 @@ const About = () => {
         >
             <AboutHeader />
 
-            <AboutSummary />
+            <AboutSummary gsap={gsap} />
 
-            <AboutMore />
+            <AboutMore gsap={gsap} />
         </div>
     );
 };
