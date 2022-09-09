@@ -21,12 +21,12 @@ const PostsListPage = () => {
         <div className="bg-green min-h-screen">
             <div className="w-5/6 xl:w-4/6 mx-auto">
                 <div className="pt-36 pb-16 md:min-h-[40vh]">
-                    <h2 className="text-yellow text-2xl md:text-4xl font-bold font-primary">
-                        Bitácora{' '}
-                        <span className="relative top-8 md:top-12 left-[-1rem] md:left-0 font-secondary text-2xl md:text-6xl">
+                    <div className="md:pb-8">
+                        <h2 className="text-yellow font-primary text-4xl md:text-6xl font-bold mt-24">Bitácora</h2>
+                        <h3 className="text-yellow text-4xl sm:text-5xl md:text-8xl font-bold ml-12 md:ml-40">
                             relatos en movimiento
-                        </span>
-                    </h2>
+                        </h3>
+                    </div>
 
                     <div className="text-beige text-sm md:text-lg mt-20">
                         {/* <p className="">

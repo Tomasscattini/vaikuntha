@@ -54,17 +54,49 @@ const Menu = ({ color = 'green', history }) => {
 
                 <nav className="row-start-2 row-end-7 w-5/6 justify-self-center">
                     <ul>
-                        <li className="menu-link" onClick={() => setIsMenuOpen(false)}>
-                            <Link to="/acerca">Quien voy siendo</Link>
+                        <li
+                            className={clsx(
+                                'menu-link transition-all delay-300 duration-1000',
+                                isMenuOpen ? 'opacity-100' : 'opacity-0'
+                            )}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            <Link to="/acerca">
+                                <span className="inline-block hover:scale-110 transition-all">Quien voy siendo</span>
+                            </Link>
                         </li>
-                        <li className="menu-link" onClick={() => setIsMenuOpen(false)}>
-                            <Link to="/proyectos">Proyectos</Link>
+                        <li
+                            className={clsx(
+                                'menu-link transition-all delay-300 duration-1000',
+                                isMenuOpen ? 'opacity-100' : 'opacity-0'
+                            )}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            <Link to="/proyectos">
+                                <span className="inline-block hover:scale-110 transition-all">Proyectos</span>
+                            </Link>
                         </li>
-                        <li className="menu-link" onClick={() => setIsMenuOpen(false)}>
-                            <Link to="/bitacora">Bitácora</Link>
+                        <li
+                            className={clsx(
+                                'menu-link transition-all delay-300 duration-1000',
+                                isMenuOpen ? 'opacity-100' : 'opacity-0'
+                            )}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            <Link to="/bitacora">
+                                <span className="inline-block hover:scale-110 transition-all">Bitácora</span>
+                            </Link>
                         </li>
-                        <li className="menu-link" onClick={() => setIsMenuOpen(false)}>
-                            <Link to="/contacto">Contacto</Link>
+                        <li
+                            className={clsx(
+                                'menu-link transition-all delay-300 duration-1000',
+                                isMenuOpen ? 'opacity-100' : 'opacity-0'
+                            )}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            <Link to="/contacto">
+                                <span className="inline-block hover:scale-110 transition-all">Contacto</span>
+                            </Link>
                         </li>
                     </ul>
                 </nav>

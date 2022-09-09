@@ -25,40 +25,43 @@ const EntreMujeresPage = () => {
     return (
         <>
             <div className="min-h-screen text-green">
-                <div className="w-5/6 xl:w-4/6 mx-auto pt-36">
-                    <div onClick={() => navigate('/proyectos')} className="relative w-8 cursor-pointer mb-12">
+                <div className="w-5/6 mx-auto pt-36">
+                    <div onClick={() => navigate('/proyectos')} className="relative w-6 md:w-8 cursor-pointer mb-12">
                         <img src={arrowBack} alt="" className="w-full" />
                     </div>
 
-                    <div className="flex items-center justify-center">
-                        <span
-                            className="grid place-content-center shrink-0 bg-green text-beige 
-                                                font-secondary text-2xl font-bold rounded-full w-8 h-8 
-                                                my-2 mr-4"
-                        >
-                            {currentProject?.id}
-                        </span>
-
-                        <h2 className="font-primary text-3xl md:text-5xl font-medium">{currentProject?.title}</h2>
+                    <div className="relative flex items-center justify-center">
+                        <h2 className="font-primary text-center text-3xl md:text-5xl font-medium">
+                            {currentProject?.title}
+                        </h2>
                     </div>
 
-                    <div className="relative mt-20">
-                        <div className="md:absolute w-4/5 mx-auto mb-16 md:mb-0 md:w-2/5 md:right-0 md:top-32 z-10">
-                            <img className="w-full" src={currentProject?.image1} alt={currentProject?.title} />
+                    <div className="relative my-20">
+                        <div className="top-0  ml-4 mb-16 md:mb-0 text-sm md:text-[1.4rem] md:leading-8 font-medium">
+                            <div className="md:flex items-center gap-20">
+                                <div className="lg:inline-block">
+                                    <p className="my-4">{currentProject?.description?.[0]}</p>
+                                    <p className="my-4">{currentProject?.description?.[1]}</p>
+                                </div>
+                                <div className="hidden lg:block shrink-0 basis-[40%]">
+                                    <img className="w-full" src={currentProject?.image1} alt={currentProject?.title} />
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="top-0  ml-4 mb-16 md:mb-0 text-sm md:text-lg w-5/6">
-                            <p className="relative z-20 my-4">{currentProject?.description?.[0]}</p>
-                            <p className="relative z-20 my-4">{currentProject?.description?.[1]}</p>
+                        <div className="lg:hidden w-4/5 mx-auto md:mt-16 mb-16 lg:mb-0 lg:w-2/5 lg:right-0 lg:top-32 z-10">
+                            <img className="w-full" src={currentProject?.image1} alt={currentProject?.title} />
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="bg-green h-full pb-48">
-                <div className="w-5/6 xl:w-4/6 mx-auto pt-16 md:pt-52 text-sm md:text-lg text-beige">
+            <div className="bg-green h-full pb-24">
+                <div className="w-5/6 xl:w-4/6 mx-auto pt-16 md:pt-32 text-sm md:text-[1.4rem] md:leading-8 font-medium text-beige">
                     <p>{currentProject?.description?.[2]}</p>
+                    <br />
                     <p>{currentProject?.description?.[3]}</p>
+                    <br />
                     <p>{currentProject?.description?.[4]}</p>
                 </div>
 
@@ -84,7 +87,7 @@ const EntreMujeresPage = () => {
                     <span className="text-yellow font-medium text-xl">Seguinos en instagram</span>
                 </a>
 
-                <div className="w-5/6 xl:w-4/6 mx-auto min-h-screen">
+                <div className="w-5/6 xl:w-4/6 mx-auto">
                     <InstagramFeed token={currentProject?.instagramToken} counter="9" />
                 </div>
             </div>

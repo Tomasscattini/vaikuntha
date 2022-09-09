@@ -1,6 +1,7 @@
 ### v1.2.0
 
 -   Feature: scroll animations on about and taller adentro.
+-   Feature: consistency through pages with font sizes, spacings and animations.
 
 ### v1.1.0
 

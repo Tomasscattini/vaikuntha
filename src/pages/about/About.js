@@ -19,7 +19,7 @@ const About = ({ gsap }) => {
 
         const timer2 = setTimeout(() => {
             setIsAnimationRunning(false);
-        }, [2000]);
+        }, [1000]);
 
         return () => {
             clearTimeout(timer);
@@ -39,7 +39,7 @@ const About = ({ gsap }) => {
 
             <AboutSummary gsap={gsap} />
 
-            <AboutMore gsap={gsap} />
+            <AboutMore gsap={gsap} className={isAnimationRunning ? 'hidden' : ''} />
         </div>
     );
 };

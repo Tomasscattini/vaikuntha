@@ -27,7 +27,7 @@ const projects = {
         description: [
             'En el año 2019, a través de la Biblioteca Popular el Urunday, se presentó un proyecto  para trabajar el oficio cerámico de raíz preamericana con mujeres de la comunidad rural de la Localidad de Profundidad, Misiones.',
             'Desde entonces y a partir de un abordaje psicosocial he guiado y acompañado lo que llamo un dispositivo para la producción colectiva del saber. La intención fue promover el aprehendizaje del oficio y su legado; un modo de pensar / sentir / hacer situados, en pos de  alentar la autonomía integral de las mujeres a través del oficio y contribuir a construir una economía feminista y comunitaria.',
-            'Andando este camino, y a través de la facilitación de dinámicas participativas, el grupo encuentra su identidad nombrándose: "Entre Mujeres y el Barro"',
+            'Andando este camino, y a través de la facilitación de dinámicas participativas, el grupo encuentra su identidad nombrándose: "Entre Mujeres y el Barro".',
             'Durante estos 4 años acompañé desde la guía en el aprendizaje del oficio y realice la coordinación y gestión de los encuentros.',
             'A partir del 2023 el grupo comenzará una nueva etapa de manera autónoma.'
         ]
@@ -35,7 +35,7 @@ const projects = {
     'taller-adentro': {
         id: '3',
         title: 'Taller Adentro',
-        subtitle: 'Conocé nuestras propuestas',
+        subtitle: 'Conocé nuestras propuestas:',
         instagramLink: 'https://www.instagram.com/vaikuntha__ct/',
         instagramToken: process.env.REACT_APP_TALLER_ADENTRO_INSTAGRAM_TOKEN,
         subdivisions: [
@@ -50,7 +50,7 @@ const projects = {
                 abstract:
                     'Desde el aprendizaje de las técnicas básicas de la cerámica tradicional preamericana, abordamos la  poética material.',
                 description: [
-                    'Desde el aprendizaje de las técnicas básicas de la cerámica tradicional preamericana, abordamos la  poética material.  ¿Qué emana de esa relación Mano/cuerpo> arcilla/paisaje -identidad?  Interacción entre el deseo propio y la materialidad que se expresa.  El “somos conducides” - un dialogo que se retroalimenta.  ¿Qué gestos aparecen en las piezas-objetos? ¿qué huella se expresa?',
+                    'Desde el aprendizaje de las técnicas básicas de la cerámica tradicional preamericana, abordamos la  poética material.  ¿Qué emana de esa relación Mano/cuerpo> arcilla/paisaje -identidad?  Interacción entre el deseo propio y la materialidad que se expresa.  El “somos conducides” - un diálogo que se retroalimenta.  ¿Qué gestos aparecen en las piezas-objetos? ¿qué huella se expresa?.',
                     'Desde estos disparadores iremos observando qué narrativa comienza a emanar desde la corporeidad de cada objeto y en relación.'
                 ]
             },
@@ -67,7 +67,7 @@ const projects = {
                     'Tomando contacto con la carta astral de cada participante, indagaremos con la intuición como principal aliada, en  imágenes arquetípicas, las cuales poseen un carácter arcaico, expresando  contenido del inconsciente colectivo.',
                 description: [
                     'Tomando contacto con la carta astral de cada participante, indagaremos con la intuición como principal aliada, en  imágenes arquetípicas, las cuales poseen un carácter arcaico, expresando  contenido del inconsciente colectivo.',
-                    'Abriremos un breve circulo de palabra, desplegando sensaciones y sentipensares de las imágenes que se hayan expresado, usando como recurso el dibujo y la palabra, para desde allí entrar en dialogo con  la arcilla y crear un amuleto como conjuro. Gestando luego entre todes, como cierre de la propuesta, una narrativa visual, una práctica ritualizada en el espacio público'
+                    'Abriremos un breve círculo de palabra, desplegando sensaciones y sentipensares de las imágenes que se hayan expresado, usando como recurso el dibujo y la palabra, para desde allí entrar en diálogo con  la arcilla y crear un amuleto como conjuro. Gestando luego entre todes, como cierre de la propuesta, una narrativa visual, una práctica ritualizada en el espacio público.'
                 ]
             }
         ]
@@ -79,7 +79,7 @@ const projects = {
         email: 'vaikunthadelatierra@gmail.com',
         uri: '/proyectos/relatos-visuales',
         abstract:
-            'Relatos visuales es un proyecto colectivo colaborativo de lenguaje plástico/visual, donde buscamos, a partir de la experiencia del trabajo de campo por medio de entrevistas en un compartir fluido con les protagonistas de esta narrativa, visibilizar, revalorizar y poner en dialogo con el contexto actual, historias que hacen a nuestra cultura regional, que están impresas en las memorias corporales y constituyen también nuestras subjetividades.'
+            'Relatos visuales es un proyecto colectivo colaborativo de lenguaje plástico/visual, donde buscamos, a partir de la experiencia del trabajo de campo por medio de entrevistas en un compartir fluido con les protagonistas de esta narrativa, visibilizar, revalorizar y poner en diálogo con el contexto actual, historias que hacen a nuestra cultura regional, que están impresas en las memorias corporales y constituyen también nuestras subjetividades.'
     }
 };
 

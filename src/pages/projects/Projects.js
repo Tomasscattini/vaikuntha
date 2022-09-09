@@ -4,16 +4,11 @@ import { HashLink } from 'react-router-hash-link';
 import { useContextInfo } from 'hooks/ContextProvider';
 import clsx from 'clsx';
 
-import arrowOpen from 'assets/images/arrow-open.svg';
+import arrowOpen from 'assets/images/arrow-open-yellow.svg';
 import projects from 'data/projects';
 
-const Projects = () => {
+const Projects = ({ gsap }) => {
     const { setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } = useContextInfo();
-
-    const imageOneRef = useRef();
-    const imageTwoRef = useRef();
-    const imageThreeRef = useRef();
-    const imageFourRef = useRef();
 
     useLayoutEffect(() => {
         window.scroll(0, 0);
@@ -24,43 +19,96 @@ const Projects = () => {
     }, []);
 
     useEffect(() => {
-        document.addEventListener('scroll', () => {
-            if (!(imageOneRef?.current && imageTwoRef?.current && imageThreeRef?.current && imageFourRef?.current))
-                return;
-            [imageOneRef.current, imageTwoRef.current, imageThreeRef.current, imageFourRef.current].forEach((ref) => {
-                if (window.screen.height / 2 >= ref.getBoundingClientRect()?.top) {
-                    ref.style.transform = 'rotate(0)';
-                } else {
-                    ref.style.transform = `rotate(${ref.classList?.[0]})`;
+        gsap.fromTo(
+            '.projects-image1',
+            {
+                rotate: '-6deg'
+            },
+            {
+                rotate: '0',
+                scrollTrigger: {
+                    trigger: '.projects-image1',
+                    start: 'top center',
+                    end: 'top center+=100',
+                    toggleActions: 'restart none none reverse',
+                    scrub: true
                 }
-            });
-        });
-
-        return () => document.removeEventListener('scroll', () => console.log('clean'));
-    }, [imageOneRef, imageTwoRef, imageThreeRef, imageFourRef]);
+            }
+        );
+        gsap.fromTo(
+            '.projects-image2',
+            {
+                rotate: '-6deg'
+            },
+            {
+                rotate: '0',
+                scrollTrigger: {
+                    trigger: '.projects-image2',
+                    start: 'top center',
+                    end: 'top center+=100',
+                    toggleActions: 'restart none none reverse',
+                    scrub: true
+                }
+            }
+        );
+        gsap.fromTo(
+            '.projects-image3',
+            {
+                rotate: '-3deg'
+            },
+            {
+                rotate: '0',
+                scrollTrigger: {
+                    trigger: '.projects-image3',
+                    start: 'top center',
+                    end: 'top center+=100',
+                    toggleActions: 'restart none none reverse',
+                    scrub: true
+                }
+            }
+        );
+        gsap.fromTo(
+            '.projects-image4',
+            {
+                rotate: '7deg'
+            },
+            {
+                rotate: '0',
+                scrollTrigger: {
+                    trigger: '.projects-image4',
+                    start: 'top center',
+                    end: 'top center+=100',
+                    toggleActions: 'restart none none reverse',
+                    scrub: true
+                }
+            }
+        );
+    }, [gsap]);
 
     return (
         <div className="min-h-screen">
-            <div className="w-5/6 xl:w-4/6 mx-auto py-20 text-green">
+            <div className="w-5/6 xl:w-4/6 mx-auto pt-20 text-green">
                 <div className="pb-8 md:pb-32">
-                    <h2 className="text-green font-primary text-3xl md:text-5xl font-bold mt-24">Proyectos</h2>
-                    <h3 className="text-green text-4xl md:text-6xl font-bold ml-20 md:ml-40">despliegues creativos</h3>
+                    <h2 className="text-green font-primary text-4xl md:text-6xl font-bold mt-24">Proyectos</h2>
+                    <h3 className="text-green text-5xl md:text-8xl font-bold ml-20 md:ml-40">despliegues creativos</h3>
                 </div>
 
-                <div className="pt-8 pb-20">
+                <div className="pt-8">
                     <div className="md:grid md:grid-cols-11 mb-20">
-                        <div className="hidden md:block md:col-start-1 md:col-end-7 mb-16 md:mb-auto">
+                        <Link
+                            to={projects['relatos-visuales']?.uri}
+                            className="hidden md:block md:col-start-1 md:col-end-7 mb-16 md:mb-auto"
+                        >
                             <img
-                                ref={imageFourRef}
-                                className="-6deg hover:rotate-0 transition-all duration-300"
+                                className="projects-image1 hover:rotate-0 transition-all duration-300"
                                 src={projects['relatos-visuales']?.mainImage}
                                 alt={projects['relatos-visuales']?.title}
                             />
-                        </div>
+                        </Link>
                         <div className="md:col-start-8 md:col-end-12">
-                            <div className="flex items-center md:items-start">
+                            <Link to={projects['relatos-visuales']?.uri} className="flex items-center md:items-start">
                                 <span
-                                    className="grid place-content-center shrink-0 bg-yellow text-green 
+                                    className="grid place-content-center shrink-0 bg-green text-beige 
                                                 font-secondary text-2xl font-bold rounded-full w-8 h-8 
                                                 md:my-1 mr-2"
                                 >
@@ -69,39 +117,46 @@ const Projects = () => {
                                 <h3 className="text-xl leading-5 md:text-3xl font-primary font-semibold">
                                     {projects['relatos-visuales']?.title}
                                 </h3>
-                            </div>
+                            </Link>
 
-                            <div className="md:hidden my-16">
+                            <Link to={projects['relatos-visuales']?.uri} className="block md:hidden my-16">
                                 <img
                                     src={projects['relatos-visuales']?.mainImage}
                                     alt={projects['relatos-visuales']?.title}
                                 />
-                            </div>
+                            </Link>
 
                             <p className="my-4">{projects['relatos-visuales']?.abstract}</p>
 
                             <Link to={projects['relatos-visuales']?.uri} className="flex items-center justify-end">
-                                <span className="uppercase text-sm font-semibold pb-1 border-b-2">descubrir</span>
+                                <span className="uppercase text-yellow text-sm font-semibold pb-1 border-b-2">
+                                    descubrir
+                                </span>
                                 <img src={arrowOpen} alt="" className="ml-4 h-4 w-4" />
                             </Link>
                         </div>
                     </div>
 
-                    <hr className="border-0 h-[2px] bg-green my-20" />
+                    <hr className="border-0 h-[1px] md:h-[2px] bg-green my-20" />
 
                     <div className="md:grid md:grid-cols-11 mb-20">
-                        <div className="hidden md:block col-start-6 col-end-12 mb-16 md:mb-auto">
+                        <Link
+                            to={projects['entre-mujeres-y-el-barro']?.uri}
+                            className="hidden md:block col-start-6 col-end-12 mb-16 md:mb-auto"
+                        >
                             <img
-                                ref={imageOneRef}
-                                className="-6deg hover:rotate-0 transition-all duration-300"
+                                className="projects-image2 hover:rotate-0 transition-all duration-300"
                                 src={projects['entre-mujeres-y-el-barro']?.mainImage}
                                 alt={projects['entre-mujeres-y-el-barro']?.title}
                             />
-                        </div>
+                        </Link>
                         <div className="md:col-start-1 md:col-end-5 md:row-start-1">
-                            <div className="flex items-center md:items-start">
+                            <Link
+                                to={projects['entre-mujeres-y-el-barro']?.uri}
+                                className="flex items-center md:items-start"
+                            >
                                 <span
-                                    className="grid place-content-center shrink-0 bg-yellow text-green 
+                                    className="grid place-content-center shrink-0 bg-green text-beige 
                                                 font-secondary text-2xl font-bold rounded-full w-8 h-8 
                                                 md:my-1 mr-2"
                                 >
@@ -110,14 +165,14 @@ const Projects = () => {
                                 <h3 className="text-xl leading-5 md:text-3xl font-primary font-semibold">
                                     {projects['entre-mujeres-y-el-barro']?.title}
                                 </h3>
-                            </div>
+                            </Link>
 
-                            <div className="md:hidden my-16">
+                            <Link to={projects['entre-mujeres-y-el-barro']?.uri} className="block md:hidden my-16">
                                 <img
                                     src={projects['entre-mujeres-y-el-barro']?.mainImage}
                                     alt={projects['entre-mujeres-y-el-barro']?.title}
                                 />
-                            </div>
+                            </Link>
 
                             <p className="my-4">{projects['entre-mujeres-y-el-barro']?.abstract}</p>
 
@@ -125,17 +180,22 @@ const Projects = () => {
                                 to={projects['entre-mujeres-y-el-barro']?.uri}
                                 className="flex items-center justify-end"
                             >
-                                <span className="uppercase text-sm font-semibold pb-1 border-b-2">descubrir</span>
+                                <span className="uppercase text-yellow text-sm font-semibold pb-1 border-b-2">
+                                    descubrir
+                                </span>
                                 <img src={arrowOpen} alt="" className="ml-4 h-4 w-4" />
                             </Link>
                         </div>
                     </div>
 
-                    <hr className="border-0 h-[2px] bg-green my-20" />
+                    <hr className="border-0 h-[1px] md:h-[2px] bg-green my-20" />
 
-                    <div className="flex items-center justify-start md:justify-center mb-16 md:mb-24">
+                    <HashLink
+                        to={projects['taller-adentro']?.subdivisions?.[0]?.uri}
+                        className="flex items-center justify-start md:justify-center mb-16 md:mb-24"
+                    >
                         <span
-                            className="grid place-content-center shrink-0 bg-yellow text-green 
+                            className="grid place-content-center shrink-0 bg-green text-beige 
                                     font-secondary text-2xl font-bold rounded-full w-8 h-8 
                                     my-2 mr-2"
                         >
@@ -144,10 +204,11 @@ const Projects = () => {
                         <h3 className="text-xl leading-5 md:text-3xl font-primary font-semibold">
                             {projects['taller-adentro']?.title}
                         </h3>
-                    </div>
+                    </HashLink>
                     {projects['taller-adentro']?.subdivisions?.map((subdivision, index) => (
-                        <div key={subdivision?.uri} className="md:grid md:grid-cols-11 mb-16 md:mb-48">
-                            <div
+                        <div key={subdivision?.uri} className="md:grid md:grid-cols-11 mb-24 md:mb-48">
+                            <HashLink
+                                to={subdivision?.uri}
                                 className={clsx(
                                     'hidden md:block mb-16 md:mb-auto',
                                     index % 2 !== 0
@@ -156,14 +217,13 @@ const Projects = () => {
                                 )}
                             >
                                 <img
-                                    ref={index === 0 ? imageTwoRef : imageThreeRef}
                                     className={`${
-                                        index % 2 !== 0 ? '-3deg' : '7deg'
+                                        index % 2 !== 0 ? 'projects-image3' : 'projects-image4'
                                     } hover:rotate-0 transition-all duration-300`}
                                     src={subdivision?.mainImage}
                                     alt={subdivision?.title}
                                 />
-                            </div>
+                            </HashLink>
                             <div
                                 className={
                                     index % 2 !== 0
@@ -171,20 +231,20 @@ const Projects = () => {
                                         : 'md:col-start-8 md:col-end-12'
                                 }
                             >
-                                <div className="flex items-center">
-                                    <h3 className="text-3xl md:text-4xl font-bold">
-                                        {subdivision?.id}-{subdivision?.title}
-                                    </h3>
-                                </div>
+                                <HashLink to={subdivision?.uri} className="flex items-center">
+                                    <h3 className="text-2xl md:text-3xl font-bold">{subdivision?.title}</h3>
+                                </HashLink>
 
-                                <div className="md:hidden my-16">
+                                <HashLink to={subdivision?.uri} className="block md:hidden my-16">
                                     <img src={subdivision?.mainImage} alt={subdivision?.title} />
-                                </div>
+                                </HashLink>
 
                                 <p className="my-4">{subdivision?.abstract}</p>
 
                                 <HashLink to={subdivision?.uri} className="flex items-center justify-end">
-                                    <span className="uppercase text-sm font-semibold pb-1 border-b-2">descubrir</span>
+                                    <span className="uppercase text-yellow text-sm font-semibold pb-1 border-b-2">
+                                        descubrir
+                                    </span>
                                     <img src={arrowOpen} alt="" className="ml-4 h-4 w-4" />
                                 </HashLink>
                             </div>

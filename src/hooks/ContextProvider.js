@@ -11,6 +11,7 @@ export const AppContextProvider = (props) => {
     const [isLoadingPosts, setIsLoadingPosts] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [hideInitialAnimation, setHideInitialAnimation] = useState(false);
+    const [location, setLocation] = useState('');
     const [posts, setPosts] = useState([]);
 
     const getPosts = useCallback(async () => {
@@ -19,6 +20,15 @@ export const AppContextProvider = (props) => {
         setPosts(response?.items || []);
         setIsLoadingPosts(false);
     }, []);
+
+    const getLocation = useCallback(async () => {
+        const response = await contentfulService.getAllPosts('location');
+        setLocation(response?.items?.[0]?.fields?.location || '');
+    }, []);
+
+    useEffect(() => {
+        getLocation();
+    }, [getLocation]);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -38,6 +48,7 @@ export const AppContextProvider = (props) => {
         isAppNameVisible,
         isLoadingPosts,
         isMenuOpen,
+        location,
         posts,
         setColorScheme,
         setIsAppLogoVisible,

@@ -1,4 +1,5 @@
 import React, { useLayoutEffect } from 'react';
+import clsx from 'clsx';
 import { HashLink } from 'react-router-hash-link';
 
 import arrowIcon from 'assets/images/arrow-down.svg';
@@ -8,7 +9,7 @@ import about6 from 'assets/images/about-6.jpg';
 import drawing1 from 'assets/images/drawing-1-beige.svg';
 import drawing2 from 'assets/images/drawing-2.svg';
 
-const AboutMore = ({ gsap }) => {
+const AboutMore = ({ className, gsap }) => {
     useLayoutEffect(() => {
         const elementsArray = [
             '.about-image1',
@@ -45,14 +46,14 @@ const AboutMore = ({ gsap }) => {
     }, [gsap]);
 
     return (
-        <>
+        <div className={clsx('', className)}>
             <div className="snap-start h-[50vh] w-auto md:h-screen md:w-[80vw] mx-auto translate-y-[-5vh] overflow-hidden">
                 <img className="about-image1 object-cover min-h-full min-w-full" src={about4} alt="" />
             </div>
 
             <div
                 id="more"
-                className="snap-start relative md:h-[180vh] w-full my-4 md:my-auto text-green text-sm md:text-[1.4rem] md:leading-8 font-medium"
+                className="snap-start relative md:h-[180vh] lg:h-[120vh] w-full my-4 md:my-auto text-green text-sm md:text-[1.4rem] md:leading-8 font-medium"
             >
                 <div className="about-image2 hidden absolute md:flex items-center justify-center z-0 bottom-16 left-16 max-w-1/2 h-2/3 overflow-hidden">
                     <img className="w-full" src={about5} alt="" />
@@ -67,7 +68,7 @@ const AboutMore = ({ gsap }) => {
                         holísticos que nutren y me acompañan en el camino.
                     </p>
                 </div>
-                <div className="relative md:mt-16 mx-auto md:mr-48 z-10 w-4/6 md:w-[50%] md:float-right">
+                <div className="relative md:mt-16 mx-auto md:mr-16 z-10 w-4/6 md:w-[50%] md:float-right">
                     <p className="about-p3 my-8">
                         Paralelamente lo Social comenzaba a inquietarme, observar el entorno, buscar comprender las
                         complejas tramas que nos tejen. Latir lo comunitario, habitar los territorios. Fue así que
@@ -128,8 +129,8 @@ const AboutMore = ({ gsap }) => {
                             atraviesa en poesía material. Gestando ideas, generando espacios, creando otros posibles.
                         </p>
 
-                        <div className="flex items-center w-full overflow-hidden my-8 md:my-32">
-                            <div className="w-1/2 mr-32">
+                        <div className="flex items-center w-full overflow-hidden mt-8 mb-40 md:my-32">
+                            <div className="w-1/2 mr-8 md:mr-32">
                                 <img src={drawing1} alt="" />
                             </div>
                             <div className="w-1/2">
@@ -145,7 +146,7 @@ const AboutMore = ({ gsap }) => {
                     <img className="h-full" src={arrowIcon} alt="" />
                 </HashLink>
             </div>
-        </>
+        </div>
     );
 };
 

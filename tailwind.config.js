@@ -2,6 +2,11 @@ module.exports = {
     mode: 'jit',
     content: ['./src/**/*.{js,jsx,ts,tsx}'],
     theme: {
+        extend: {
+            borderWidth: {
+                1: '1px'
+            }
+        },
         colors: {
             beige: '#E0D9D1',
             darkGreen: '#232616',
@@ -21,15 +26,8 @@ module.exports = {
             },
             'beating-logo': {
                 '0%': { transform: 'scale(1)' },
-                '10%': { transform: 'scale(0.7)' },
-                '25%': { transform: 'scale(1.9)' },
-                // '27%': { transform: 'scale(1.65)' },
-                '40%': { transform: 'scale(1.65)' },
-                '45%': { transform: 'scale(1.52)' },
-                '60%': { transform: 'scale(2.5)' },
-                '62%': { transform: 'scale(2.45)' },
-                '80%': { transform: 'scale(2.20)' },
-                '85%': { transform: 'scale(2.40)' },
+                '50%': { transform: 'scale(1)' },
+                '80%': { opacity: 0 },
                 '100%': { transform: 'scale(240)' }
             },
             fade: {
@@ -59,11 +57,11 @@ module.exports = {
             'image-grow': 'image-grow 40s linear infinite',
             'beating-logo': 'beating-logo 1.5s ease-in-out forwards',
             fade: 'fade 1.5s linear forwards',
-            'fade-linear': 'fade-linear 1s linear 1s forwards',
-            'translate-word-1': 'translate-word-1 2s linear forwards',
-            'translate-word-2': 'translate-word-2 2s linear forwards',
-            'translate-word-1-small': 'translate-word-1-small 2s linear forwards',
-            'translate-word-2-small': 'translate-word-2-small 2s linear forwards'
+            'fade-linear': 'fade-linear .5s linear .5s forwards',
+            'translate-word-1': 'translate-word-1 1s linear forwards',
+            'translate-word-2': 'translate-word-2 1s linear forwards',
+            'translate-word-1-small': 'translate-word-1-small 1s linear forwards',
+            'translate-word-2-small': 'translate-word-2-small 1s linear forwards'
         }
     },
     plugins: [require('@tailwindcss/line-clamp')],
