@@ -2,6 +2,7 @@
 
 -   Feature: scroll animations on about and taller adentro.
 -   Feature: consistency through pages with font sizes, spacings and animations.
+-   Bugfix: Fix sizing of projects page on smaller screens.
 
 ### v1.1.0
 

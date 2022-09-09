@@ -31,7 +31,7 @@ const Navbar = () => {
                     <h1
                         className={clsx(
                             text,
-                            'text-3xl leading-10 font-bold py-4 transition-all duration-500 lowercase font-medium'
+                            'text-3xl leading-10 font-bold py-4 transition-all duration-500 lowercase'
                         )}
                     >
                         <Link to="/">Vaikuntha</Link>

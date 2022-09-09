@@ -66,7 +66,7 @@ const Contact = (props) => {
 
             <div className="absolute flex flex-col-reverse gap-4 md:flex-row items-center justify-between bottom-4 left-0 right-0 text-xs">
                 <p>
-                    Creado con 🤍 por Itakhi {new Date().getFullYear()} (
+                    Creado con 🤎 por Itakhi {new Date().getFullYear()} (
                     <a
                         className="underline"
                         href="https://www.gabrielapolancoferreyra.com/"

@@ -53,7 +53,7 @@ const AboutMore = ({ className, gsap }) => {
 
             <div
                 id="more"
-                className="snap-start relative md:h-[180vh] lg:h-[120vh] w-full my-4 md:my-auto text-green text-sm md:text-[1.4rem] md:leading-8 font-medium"
+                className="snap-start relative md:min-h-1500 lg:min-h-1200 w-full my-4 md:my-auto text-green text-sm md:text-[1.4rem] md:leading-8 font-medium"
             >
                 <div className="about-image2 hidden absolute md:flex items-center justify-center z-0 bottom-16 left-16 max-w-1/2 h-2/3 overflow-hidden">
                     <img className="w-full" src={about5} alt="" />

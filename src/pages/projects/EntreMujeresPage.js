@@ -16,7 +16,6 @@ const EntreMujeresPage = () => {
     const navigate = useNavigate();
 
     useLayoutEffect(() => {
-        window.scroll(0, 0);
         setColorScheme('green');
         setIsAppLogoVisible(true);
         setIsAppNameVisible(true);

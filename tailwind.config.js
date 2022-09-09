@@ -5,6 +5,10 @@ module.exports = {
         extend: {
             borderWidth: {
                 1: '1px'
+            },
+            minHeight: {
+                1200: '1200px',
+                1500: '1500px'
             }
         },
         colors: {

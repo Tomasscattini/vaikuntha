@@ -16,7 +16,6 @@ const EntreMujeresPage = ({ gsap }) => {
     const navigate = useNavigate();
 
     useLayoutEffect(() => {
-        window.scroll(0, 0);
         setColorScheme('yellow');
         setIsAppLogoVisible(true);
         setIsAppNameVisible(true);

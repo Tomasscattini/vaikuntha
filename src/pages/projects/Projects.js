@@ -1,5 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useLayoutEffect } from 'react';
 import { HashLink } from 'react-router-hash-link';
 import { useContextInfo } from 'hooks/ContextProvider';
 import clsx from 'clsx';
@@ -11,7 +10,6 @@ const Projects = ({ gsap }) => {
     const { setColorScheme, setIsAppLogoVisible, setIsAppNameVisible } = useContextInfo();
 
     useLayoutEffect(() => {
-        window.scroll(0, 0);
         setColorScheme('green');
         setIsAppLogoVisible(true);
         setIsAppNameVisible(true);
@@ -95,8 +93,8 @@ const Projects = ({ gsap }) => {
 
                 <div className="pt-8">
                     <div className="md:grid md:grid-cols-11 mb-20">
-                        <Link
-                            to={projects['relatos-visuales']?.uri}
+                        <HashLink
+                            to={`${projects['relatos-visuales']?.uri}#top`}
                             className="hidden md:block md:col-start-1 md:col-end-7 mb-16 md:mb-auto"
                         >
                             <img
@@ -104,9 +102,12 @@ const Projects = ({ gsap }) => {
                                 src={projects['relatos-visuales']?.mainImage}
                                 alt={projects['relatos-visuales']?.title}
                             />
-                        </Link>
+                        </HashLink>
                         <div className="md:col-start-8 md:col-end-12">
-                            <Link to={projects['relatos-visuales']?.uri} className="flex items-center md:items-start">
+                            <HashLink
+                                to={`${projects['relatos-visuales']?.uri}#top`}
+                                className="flex items-center md:items-start"
+                            >
                                 <span
                                     className="grid place-content-center shrink-0 bg-green text-beige 
                                                 font-secondary text-2xl font-bold rounded-full w-8 h-8 
@@ -117,31 +118,34 @@ const Projects = ({ gsap }) => {
                                 <h3 className="text-xl leading-5 md:text-3xl font-primary font-semibold">
                                     {projects['relatos-visuales']?.title}
                                 </h3>
-                            </Link>
+                            </HashLink>
 
-                            <Link to={projects['relatos-visuales']?.uri} className="block md:hidden my-16">
+                            <HashLink to={`${projects['relatos-visuales']?.uri}#top`} className="block md:hidden my-16">
                                 <img
                                     src={projects['relatos-visuales']?.mainImage}
                                     alt={projects['relatos-visuales']?.title}
                                 />
-                            </Link>
+                            </HashLink>
 
                             <p className="my-4">{projects['relatos-visuales']?.abstract}</p>
 
-                            <Link to={projects['relatos-visuales']?.uri} className="flex items-center justify-end">
+                            <HashLink
+                                to={`${projects['relatos-visuales']?.uri}#top`}
+                                className="flex items-center justify-end"
+                            >
                                 <span className="uppercase text-yellow text-sm font-semibold pb-1 border-b-2">
                                     descubrir
                                 </span>
                                 <img src={arrowOpen} alt="" className="ml-4 h-4 w-4" />
-                            </Link>
+                            </HashLink>
                         </div>
                     </div>
 
                     <hr className="border-0 h-[1px] md:h-[2px] bg-green my-20" />
 
                     <div className="md:grid md:grid-cols-11 mb-20">
-                        <Link
-                            to={projects['entre-mujeres-y-el-barro']?.uri}
+                        <HashLink
+                            to={`${projects['entre-mujeres-y-el-barro']?.uri}#top`}
                             className="hidden md:block col-start-6 col-end-12 mb-16 md:mb-auto"
                         >
                             <img
@@ -149,10 +153,10 @@ const Projects = ({ gsap }) => {
                                 src={projects['entre-mujeres-y-el-barro']?.mainImage}
                                 alt={projects['entre-mujeres-y-el-barro']?.title}
                             />
-                        </Link>
+                        </HashLink>
                         <div className="md:col-start-1 md:col-end-5 md:row-start-1">
-                            <Link
-                                to={projects['entre-mujeres-y-el-barro']?.uri}
+                            <HashLink
+                                to={`${projects['entre-mujeres-y-el-barro']?.uri}#top`}
                                 className="flex items-center md:items-start"
                             >
                                 <span
@@ -165,33 +169,36 @@ const Projects = ({ gsap }) => {
                                 <h3 className="text-xl leading-5 md:text-3xl font-primary font-semibold">
                                     {projects['entre-mujeres-y-el-barro']?.title}
                                 </h3>
-                            </Link>
+                            </HashLink>
 
-                            <Link to={projects['entre-mujeres-y-el-barro']?.uri} className="block md:hidden my-16">
+                            <HashLink
+                                to={`${projects['entre-mujeres-y-el-barro']?.uri}#top`}
+                                className="block md:hidden my-16"
+                            >
                                 <img
                                     src={projects['entre-mujeres-y-el-barro']?.mainImage}
                                     alt={projects['entre-mujeres-y-el-barro']?.title}
                                 />
-                            </Link>
+                            </HashLink>
 
                             <p className="my-4">{projects['entre-mujeres-y-el-barro']?.abstract}</p>
 
-                            <Link
-                                to={projects['entre-mujeres-y-el-barro']?.uri}
+                            <HashLink
+                                to={`${projects['entre-mujeres-y-el-barro']?.uri}#top`}
                                 className="flex items-center justify-end"
                             >
                                 <span className="uppercase text-yellow text-sm font-semibold pb-1 border-b-2">
                                     descubrir
                                 </span>
                                 <img src={arrowOpen} alt="" className="ml-4 h-4 w-4" />
-                            </Link>
+                            </HashLink>
                         </div>
                     </div>
 
                     <hr className="border-0 h-[1px] md:h-[2px] bg-green my-20" />
 
                     <HashLink
-                        to={projects['taller-adentro']?.subdivisions?.[0]?.uri}
+                        to={`${projects['taller-adentro']?.subdivisions?.[0]?.uri}#top`}
                         className="flex items-center justify-start md:justify-center mb-16 md:mb-24"
                     >
                         <span
