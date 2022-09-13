@@ -23,7 +23,7 @@ const projects = {
         email: 'vaikunthadelatierra@gmail.com',
         uri: '/proyectos/entre-mujeres-y-el-barro',
         abstract:
-            'El proyecto Entre Mujeres y el Barro es un dispositivo para lograr una producción colectiva del saber, donde se desarrolla y se construye el pensamiento crítico para comprender el entorno socio productivo, la mirada sensible y creativa entre las compañeras, empoderandose al mismo tiempo , y por sobre todo, del oficio.',
+            'Espacio de trabajo y aprendizaje colectivo en torno al oficio cerámico de raiz preamericana en dialogo con nuestro presente y particularidades, que posibilite y aliente la autonomía de las mujeres, es de nuestras principales intenciones.',
         description: [
             'En el año 2019, a través de la Biblioteca Popular el Urunday, se presentó un proyecto  para trabajar el oficio cerámico de raíz preamericana con mujeres de la comunidad rural de la Localidad de Profundidad, Misiones.',
             'Desde entonces y a partir de un abordaje psicosocial he guiado y acompañado lo que llamo un dispositivo para la producción colectiva del saber. La intención fue promover el aprehendizaje del oficio y su legado; un modo de pensar / sentir / hacer situados, en pos de  alentar la autonomía integral de las mujeres a través del oficio y contribuir a construir una economía feminista y comunitaria.',
@@ -79,7 +79,7 @@ const projects = {
         email: 'vaikunthadelatierra@gmail.com',
         uri: '/proyectos/relatos-visuales',
         abstract:
-            'Relatos visuales es un proyecto colectivo colaborativo de lenguaje plástico/visual, donde buscamos, a partir de la experiencia del trabajo de campo por medio de entrevistas en un compartir fluido con les protagonistas de esta narrativa, visibilizar, revalorizar y poner en diálogo con el contexto actual, historias que hacen a nuestra cultura regional, que están impresas en las memorias corporales y constituyen también nuestras subjetividades.'
+            'Somos un colectivo de Mujeres artistas y de oficios que buscamos  a partir de la experiencia del trabajo de campo por medio de entrevistas, visibilizar, revalorizar y poner en dialogo con el contexto actual, historias que nos interpelan, que están impresas en las memorias corporales y constituyen también nuestras subjetividades. Para luego traducir la experiencia en diferentes soportes plásticos, visuales, sonoros y sensoriales.'
     }
 };
 

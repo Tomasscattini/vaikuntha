@@ -65,7 +65,7 @@ const Contact = (props) => {
             </div>
 
             <div className="absolute flex flex-col-reverse gap-4 md:flex-row items-center justify-between bottom-4 left-0 right-0 text-xs">
-                <p>
+                <p className="text-center">
                     Creado con 🤎 por Itakhi {new Date().getFullYear()} (
                     <a
                         className="underline"
@@ -82,7 +82,7 @@ const Contact = (props) => {
                     )
                 </p>
 
-                <p>🌎 Viajando por: {location}</p>
+                <p className="text-center">🌎 Viajando por: {location}</p>
             </div>
         </div>
     );

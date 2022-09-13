@@ -1,3 +1,8 @@
+### v1.2.1
+
+-   Update: update abstract on projects page.
+-   Update: Center Footer credits.
+
 ### v1.2.0
 
 -   Feature: scroll animations on about and taller adentro.
